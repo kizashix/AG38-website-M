@@ -13,7 +13,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: linear-gradient(135deg, #f0f0f0, #3c3c3c);
+            background: linear-gradient(135deg, #1e1e2f, #3c3c3c);
             color: #fff;
             text-align: center;
             animation: backgroundAnimation 5s infinite alternate;
@@ -22,20 +22,18 @@
         /* Animating background */
         @keyframes backgroundAnimation {
             0% {
-                background: linear-gradient(135deg, #f0f0f0, #3c3c3c);
+                background: linear-gradient(135deg, #1e1e2f, #3c3c3c);
             }
             100% {
-                background: linear-gradient(135deg, #ff6f61, #3c3c3c);
+                background: linear-gradient(135deg, #141e30, #243b55);
             }
         }
 
-        /* Container for the text */
-        .container {
-            padding: 20px;
-            border-radius: 10px;
-            background-color: rgba(0, 0, 0, 0.6);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            animation: fadeIn 1s ease-in-out;
+        /* Logo styles */
+        .logo {
+            max-width: 200px;
+            margin: 0 auto 20px;
+            animation: fadeIn 1.5s ease-in-out;
         }
 
         /* Fade-in animation */
@@ -46,6 +44,14 @@
             100% {
                 opacity: 1;
             }
+        }
+
+        /* Container for the text */
+        .container {
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
         h1 {
@@ -70,7 +76,6 @@
             font-size: 1.2em;
             margin-top: 10px;
             opacity: 0.8;
-            animation: fadeIn 1.5s ease-in-out;
         }
 
         /* Button styles */
@@ -112,6 +117,8 @@
 <body>
 
     <div class="container">
+        <!-- Logo Image -->
+        <img src="path-to-your-logo.webp" alt="AMS Logo" class="logo">
         <h1>We'll Be Back Soon!</h1>
         <p>Our site is currently undergoing scheduled maintenance. We will be back shortly. Thank you for your patience!</p>
         <a href="#" class="button">Notify Me</a>
