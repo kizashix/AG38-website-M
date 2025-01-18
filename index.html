@@ -3,126 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>We'll Be Back Soon</title>
+    <title>AMS - Futuristic Design</title>
     <style>
         /* Body styles */
         body {
             margin: 0;
+            padding: 0;
             font-family: 'Arial', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: linear-gradient(135deg, #1e1e2f, #3c3c3c);
+            background: linear-gradient(135deg, #1e1e2f, #141e30, #243b55);
             color: #fff;
             text-align: center;
-            animation: backgroundAnimation 5s infinite alternate;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
         }
 
-        /* Animating background */
-        @keyframes backgroundAnimation {
+        /* Glowing background animation */
+        @keyframes glowBackground {
             0% {
-                background: linear-gradient(135deg, #1e1e2f, #3c3c3c);
+                background: linear-gradient(135deg, #1e1e2f, #141e30, #243b55);
+            }
+            50% {
+                background: linear-gradient(135deg, #243b55, #1e1e2f, #141e30);
             }
             100% {
-                background: linear-gradient(135deg, #141e30, #243b55);
+                background: linear-gradient(135deg, #1e1e2f, #243b55, #141e30);
             }
+        }
+
+        body {
+            animation: glowBackground 10s infinite alternate;
         }
 
         /* Logo styles */
         .logo {
-            max-width: 200px;
-            margin: 0 auto 20px;
-            animation: fadeIn 1.5s ease-in-out;
+            width: 300px;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
         }
 
         /* Fade-in animation */
         @keyframes fadeIn {
             0% {
                 opacity: 0;
+                transform: scale(0.8);
             }
             100% {
                 opacity: 1;
+                transform: scale(1);
             }
         }
 
-        /* Container for the text */
+        /* Section container */
         .container {
+            max-width: 900px;
             padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
             border-radius: 10px;
-            background-color: rgba(0, 0, 0, 0.6);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        }
-
-        h1 {
-            font-size: 3em;
-            margin: 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
             animation: slideIn 1s ease-out;
         }
 
-        /* Slide-in text animation */
+        /* Slide-in animation */
         @keyframes slideIn {
             0% {
-                transform: translateY(-50px);
                 opacity: 0;
+                transform: translateY(50px);
             }
             100% {
-                transform: translateY(0);
                 opacity: 1;
+                transform: translateY(0);
             }
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0 0 10px;
+            color: #ff6f61;
         }
 
         p {
             font-size: 1.2em;
-            margin-top: 10px;
-            opacity: 0.8;
+            margin: 0;
+            line-height: 1.6;
         }
 
         /* Button styles */
         .button {
+            display: inline-block;
             margin-top: 20px;
-            padding: 10px 20px;
+            padding: 15px 30px;
             font-size: 1.2em;
-            background-color: #ff6f61;
-            color: white;
+            color: #fff;
+            background: #ff6f61;
             border: none;
             border-radius: 5px;
-            cursor: pointer;
             text-transform: uppercase;
-            transition: background-color 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(255, 111, 97, 0.3);
+            transition: all 0.3s ease;
         }
 
         /* Button hover effect */
         .button:hover {
-            background-color: #e65c50;
-        }
-
-        /* Responsive design */
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2em;
-            }
-
-            p {
-                font-size: 1em;
-            }
-
-            .button {
-                font-size: 1em;
-                padding: 8px 16px;
-            }
+            background: #e65c50;
+            box-shadow: 0 6px 15px rgba(255, 111, 97, 0.5);
         }
     </style>
 </head>
 <body>
+    <!-- Logo Section -->
+    <img src="AMS.webp" alt="AMS Logo" class="logo">
 
+    <!-- Main Content -->
     <div class="container">
-        <!-- Logo Image -->
-        <img src="AMS.webp" alt="AMS Logo" class="logo">
-        <h1>We'll Be Back Soon!</h1>
-        <p>Our site is currently undergoing scheduled maintenance. We will be back shortly. Thank you for your patience!</p>
+        <h1>Welcome to AMS</h1>
+        <p>
+            Our platform is currently undergoing improvements to bring you a better experience. 
+            Stay tuned for an amazing new journey into the future of technology and design.
+        </p>
         <a href="#" class="button">Notify Me</a>
     </div>
-
 </body>
 </html>
