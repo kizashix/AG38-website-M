@@ -3,25 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Under Maintenance</title>
+    <title>We'll Be Back Soon</title>
     <style>
+        /* Body styles */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #f0f0f0, #3c3c3c);
+            color: #fff;
             text-align: center;
-            padding-top: 50px;
+            animation: backgroundAnimation 5s infinite alternate;
         }
+
+        /* Animating background */
+        @keyframes backgroundAnimation {
+            0% {
+                background: linear-gradient(135deg, #f0f0f0, #3c3c3c);
+            }
+            100% {
+                background: linear-gradient(135deg, #ff6f61, #3c3c3c);
+            }
+        }
+
+        /* Container for the text */
+        .container {
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
         h1 {
-            color: #ff5733;
+            font-size: 3em;
+            margin: 0;
+            animation: slideIn 1s ease-out;
         }
+
+        /* Slide-in text animation */
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
         p {
-            font-size: 18px;
+            font-size: 1.2em;
+            margin-top: 10px;
+            opacity: 0.8;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        /* Button styles */
+        .button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Button hover effect */
+        .button:hover {
+            background-color: #e65c50;
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            .button {
+                font-size: 1em;
+                padding: 8px 16px;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>We'll be back soon!</h1>
-    <p>Our site is currently undergoing scheduled maintenance. We will be back shortly. Thank you for your patience!</p>
+
+    <div class="container">
+        <h1>We'll Be Back Soon!</h1>
+        <p>Our site is currently undergoing scheduled maintenance. We will be back shortly. Thank you for your patience!</p>
+        <a href="#" class="button">Notify Me</a>
+    </div>
+
 </body>
 </html>
