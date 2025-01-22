@@ -16,7 +16,7 @@
 
         body {
             font-family: 'Rajdhani', sans-serif;
-            background: #121212;
+            background: linear-gradient(180deg, #0d0d0d, #1a1a1a);
             color: #fff;
             line-height: 1.6;
             overflow-x: hidden;
@@ -30,7 +30,7 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            background: linear-gradient(180deg, #0d0d0d, #1a1a1a);
+            background: linear-gradient(180deg, #000000, #002b36);
         }
 
         .logo-container {
@@ -40,7 +40,7 @@
         }
 
         .main-logo {
-            width: 200px; /* Adjust size here */
+            width: 250px; /* Adjust size */
             animation: pulse 3s infinite ease-in-out;
         }
 
@@ -77,25 +77,26 @@
 
         h1 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 10px;
-            color: #ff8c00;
+            color: #00f2ff;
+            text-shadow: 0 0 10px #00f2ff;
         }
 
         p {
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             color: #ddd;
             margin-bottom: 20px;
         }
 
         .cta-btn {
-            padding: 10px 20px;
+            padding: 15px 30px;
             background: linear-gradient(90deg, #ff8c00, #ff007a);
             border: none;
-            border-radius: 25px;
+            border-radius: 30px;
             color: #fff;
             font-weight: bold;
-            font-size: 1rem;
+            font-size: 1.2rem;
             transition: all 0.3s ease;
         }
 
@@ -106,34 +107,38 @@
 
         /* Section Styling */
         section {
-            padding: 50px 0;
+            padding: 60px 20px;
             text-align: center;
         }
 
         .about, .experience {
             background-color: #1a1a1a;
+            box-shadow: 0 0 20px rgba(255, 140, 0, 0.5);
         }
 
         .skills {
             background-color: #333;
+            box-shadow: 0 0 20px rgba(0, 242, 255, 0.5);
         }
 
         h2 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 2rem;
+            font-size: 2.5rem;
             margin-bottom: 20px;
         }
 
         .skill-set {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 20px;
         }
 
         .skill {
             background-color: #444;
-            padding: 10px 20px;
-            border-radius: 5px;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
             animation: glow 2s infinite alternate;
         }
 
@@ -157,38 +162,35 @@
             font-size: 0.9rem;
         }
 
-        /* Placeholder for additional styling to extend the code */
-        .extra-style {
-            color: #fff;
-            padding: 10px;
-            background: #222;
+        /* Animations */
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
         }
 
-        /* Repeat placeholder to add lines */
-        .extra-style-1 {
-            color: #fff;
-            padding: 10px;
-            background: #111;
-        }
-        .extra-style-2 {
-            color: #fff;
-            padding: 10px;
-            background: #333;
+        .experience-item {
+            animation: slideIn 1s ease-out;
         }
 
-        .extra-style-3 {
-            color: #fff;
-            padding: 10px;
-            background: #444;
+        /* Add Extra Glow for Buttons */
+        .cta-btn, .skill {
+            animation: pulseGlow 2s infinite alternate;
         }
 
-        .extra-style-4 {
-            color: #fff;
-            padding: 10px;
-            background: #555;
+        @keyframes pulseGlow {
+            0% {
+                filter: drop-shadow(0 0 10px #ff8c00);
+            }
+            100% {
+                filter: drop-shadow(0 0 20px #00f2ff);
+            }
         }
-
-        /* Repeat similar styles to reach desired line count */
     </style>
 </head>
 <body>
