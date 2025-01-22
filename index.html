@@ -1,245 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ammar M. Alshehri | Cybersecurity Analyst</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500&display=swap" rel="stylesheet">
-  <style>
-    /* Global Styles */
-    body, html {
-      margin: 0;
-      padding: 0;
-      font-family: 'Rajdhani', sans-serif;
-      scroll-behavior: smooth;
-      background: #111;
-      color: #fff;
-      overflow-x: hidden;
-    }
-    a { text-decoration: none; color: inherit; }
-    img { max-width: 100%; display: block; }
+/* Reset some default styles */
+body, h1, h2, h3, p, div {
+    margin: 0;
+    padding: 0;
+}
 
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 30px;
-    }
+body {
+    font-family: 'Rajdhani', sans-serif;
+    color: white;
+    background-color: #121212;
+    line-height: 1.6;
+}
 
-    /* Keyframes for Glowing Animation */
-    @keyframes glow {
-      0% { text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff; }
-      50% { text-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff; }
-      100% { text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff; }
-    }
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
 
-    /* Header */
-    header {
-      position: relative;
-      height: 100vh;
-      background: url('hero-image.jpg') no-repeat center center/cover;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: #fff;
-      overflow: hidden;
-    }
-    header::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.7);
-      z-index: 1;
-    }
-    header .content {
-      position: relative;
-      z-index: 2;
-      max-width: 800px;
-      padding: 0 20px;
-      animation: glow 3s infinite;
-    }
-    header img.logo {
-      width: 120px;
-      height: auto;
-      margin-bottom: 20px;
-      filter: drop-shadow(0 0 10px gold);
-      animation: glow 2s infinite;
-    }
-    header h1 {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 3rem;
-      margin-bottom: 20px;
-      color: gold;
-      text-shadow: 0 0 15px gold, 0 0 30px gold;
-      animation: glow 3s infinite;
-    }
-    header p {
-      font-size: 1.3rem;
-      margin: 10px 0 30px;
-      color: cyan;
-      text-shadow: 0 0 10px cyan, 0 0 15px cyan;
-      animation: glow 4s infinite;
-    }
-    header .cta-btn {
-      padding: 15px 30px;
-      font-size: 1rem;
-      border: 2px solid gold;
-      border-radius: 50px;
-      background: transparent;
-      color: gold;
-      transition: background 0.3s, color 0.3s, transform 0.3s;
-    }
-    header .cta-btn:hover {
-      background: gold;
-      color: #111;
-      transform: scale(1.05) rotate(2deg);
-    }
+header {
+    background: url('header-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
-    /* Section Titles */
-    .section-title {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 2rem;
-      margin-bottom: 40px;
-      position: relative;
-      display: inline-block;
-      animation: glow 3s infinite;
-    }
-    .section-title::after {
-      content: '';
-      height: 4px;
-      width: 50%;
-      background: linear-gradient(90deg, purple, cyan);
-      position: absolute;
-      left: 50%;
-      bottom: -10px;
-      transform: translateX(-50%);
-    }
+.header-content {
+    animation: fadeIn 2s ease-out;
+}
 
-    /* Sections */
-    section {
-      padding: 80px 20px;
-      text-align: center;
-    }
-    .about, .work-experience, .skills {
-      text-align: left;
-    }
-    .about {
-      background: #222;
-    }
-    .about p {
-      max-width: 800px;
-      margin: auto;
-      line-height: 1.6;
-      animation: glow 5s infinite;
-    }
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
-    /* Work Experience */
-    .work-item {
-      margin-bottom: 30px;
-      padding: 20px;
-      background: #222;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s;
-    }
-    .work-item:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 30px magenta;
-    }
-    .work-item h3 {
-      font-size: 1.5rem;
-      color: cyan;
-      text-shadow: 0 0 10px cyan, 0 0 15px cyan;
-      margin: 0 0 10px;
-    }
-    .work-item p {
-      color: #ccc;
-      margin: 5px 0;
-    }
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
 
-    /* Skills Section */
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      justify-content: center;
-      background: #111;
-      padding: 40px;
-    }
-    .skills .skill {
-      padding: 15px 20px;
-      background: rgba(0, 0, 0, 0.5);
-      border: 2px solid magenta;
-      border-radius: 8px;
-      color: #fff;
-      font-size: 1.2rem;
-      text-align: center;
-      text-shadow: 0 0 10px magenta;
-      transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
-    }
-    .skills .skill:hover {
-      background: magenta;
-      transform: scale(1.05);
-      box-shadow: 0 0 15px magenta;
-    }
+.section {
+    padding: 50px 0;
+    text-align: center;
+}
 
-    /* Footer */
-    footer {
-      margin-top: 60px;
-      padding: 40px 20px;
-      background: #000;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #777;
-      text-shadow: 0 0 5px #fff;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="content">
-      <img src="ag38.me_Logo.png" alt="AMS Logo" class="logo" />
-      <h1>Ammar M. Alshehri</h1>
-      <p>Cybersecurity Analyst at JIGPC | Transforming IT infrastructure with innovation and expertise.</p>
-      <a href="#about" class="cta-btn">Learn More</a>
-    </div>
-  </header>
+.about, .experience {
+    background-color: #1a1a1a;
+}
 
-  <!-- About Section -->
-  <section id="about" class="about">
-    <h2 class="section-title">About Me</h2>
-    <p>
-      As a visionary in IT system administration and cybersecurity, I bring over five years of transformative experience. I specialize in designing, implementing, and optimizing advanced IT infrastructure and security solutions to drive innovation and operational excellence.
-    </p>
-  </section>
+.skills {
+    background-color: #333;
+}
 
-  <!-- Work Experience Section -->
-  <section class="work-experience">
-    <h2 class="section-title">Work Experience</h2>
-    <div class="work-item">
-      <h3>Cybersecurity Analyst at JIGPC</h3>
-      <p>Developing and implementing strategies to safeguard IT infrastructure.</p>
-    </div>
-    <div class="work-item">
-      <h3>IT Systems Administrator</h3>
-      <p>Optimized IT infrastructure to ensure business continuity.</p>
-    </div>
-  </section>
+.skill-set {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
 
-  <!-- Skills Section -->
-  <section class="skills">
-    <h2 class="section-title">Skills</h2>
-    <div class="skill">Cybersecurity</div>
-    <div class="skill">IT Infrastructure Management</div>
-    <div class="skill">Data Loss Prevention</div>
-    <div class="skill">Risk Management</div>
-    <div class="skill">Incident Response</div>
-  </section>
+.skill {
+    background-color: #444;
+    padding: 10px 20px;
+    border-radius: 5px;
+    animation: pulse 2s infinite;
+}
 
-  <!-- Footer -->
-  <footer>
-    &copy; 2025 Ammar M. Alshehri. All rights reserved.
-  </footer>
-</body>
-</html>
+@keyframes pulse {
+    0% { background-color: #444; }
+    50% { background-color: #555; }
+    100% { background-color: #444; }
+}
+
+.experience-item {
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #000;
+    color: #666;
+    text-align: center;
+    padding: 20px 0;
+}
+// This script could be expanded to include more interactive or animated elements
+document.addEventListener('DOMContentLoaded', function () {
+    console.log('Document loaded and ready!');
+});
