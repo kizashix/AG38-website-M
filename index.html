@@ -3,130 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AMS - Futuristic Design</title>
+    <title>Site Under Maintenance</title>
     <style>
-        /* Body styles */
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #1e1e2f, #141e30, #243b55);
-            color: #fff;
+            font-family: Arial, sans-serif;
             text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            overflow: hidden;
+            background: url('https://source.unsplash.com/1920x1080/?blur,background') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
         }
 
-        /* Glowing background animation */
-        @keyframes glowBackground {
-            0% {
-                background: linear-gradient(135deg, #1e1e2f, #141e30, #243b55);
-            }
-            50% {
-                background: linear-gradient(135deg, #243b55, #1e1e2f, #141e30);
-            }
-            100% {
-                background: linear-gradient(135deg, #1e1e2f, #243b55, #141e30);
-            }
-        }
-
-        body {
-            animation: glowBackground 10s infinite alternate;
-        }
-
-        /* Logo styles */
-        .logo {
-            width: 300px;
-            margin-bottom: 20px;
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        /* Fade-in animation */
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-                transform: scale(0.8);
-            }
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        /* Section container */
         .container {
-            max-width: 900px;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-            animation: slideIn 1s ease-out;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            max-width: 600px;
+            margin: auto;
         }
 
-        /* Slide-in animation */
-        @keyframes slideIn {
-            0% {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .maintenance-icon {
+            margin: 20px auto;
+            display: block;
         }
 
         h1 {
-            font-size: 2.5em;
-            margin: 0 0 10px;
-            color: #ff6f61;
+            font-size: 2.5rem;
+            text-transform: uppercase;
         }
 
         p {
-            font-size: 1.2em;
-            margin: 0;
-            line-height: 1.6;
+            font-size: 1.1rem;
+            margin: 20px 0;
         }
 
-        /* Button styles */
-        .button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 15px 30px;
-            font-size: 1.2em;
-            color: #fff;
-            background: #ff6f61;
+        .timer {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .time-block {
+            margin: 0 10px;
+            text-align: center;
+        }
+
+        .time-block span {
+            display: block;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .email-form {
+            margin: 20px 0;
+        }
+
+        .email-form input[type="email"] {
+            padding: 10px;
+            width: 70%;
             border: none;
             border-radius: 5px;
-            text-transform: uppercase;
-            cursor: pointer;
-            text-decoration: none;
-            box-shadow: 0 4px 10px rgba(255, 111, 97, 0.3);
-            transition: all 0.3s ease;
         }
 
-        /* Button hover effect */
-        .button:hover {
-            background: #e65c50;
-            box-shadow: 0 6px 15px rgba(255, 111, 97, 0.5);
+        .email-form button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .social-icons {
+            margin: 20px 0;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.5rem;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 0.8rem;
         }
     </style>
 </head>
 <body>
-    <!-- Logo Section -->
-    <img src="AMS.webp" alt="AMS Logo" class="logo">
-
-    <!-- Main Content -->
     <div class="container">
-        <h1>Welcome to AMS</h1>
-        <p>
-            Our platform is currently undergoing improvements to bring you a better experience. 
-            Stay tuned for an amazing new journey into the future of technology and design.
-        </p>
-        <a href="#" class="button">Notify Me</a>
+        <img src="https://img.icons8.com/external-flat-juicy-fish/100/000000/external-maintenance-tools-flat-flat-juicy-fish.png" alt="Maintenance Icon" class="maintenance-icon">
+        <h1>Site Under Maintenance</h1>
+        <p>Sorry for the inconvenience. To improve our services, we have momentarily shut down our site.</p>
+
+        <div class="timer" id="timer">
+            <div class="time-block">
+                <span id="days">0</span>
+                Days
+            </div>
+            <div class="time-block">
+                <span id="hours">0</span>
+                Hours
+            </div>
+            <div class="time-block">
+                <span id="minutes">0</span>
+                Minutes
+            </div>
+            <div class="time-block">
+                <span id="seconds">0</span>
+                Seconds
+            </div>
+        </div>
+
+        <div class="email-form">
+            <input type="email" placeholder="Enter your email address" id="email">
+            <button onclick="alert('Thank you!')">Get Notified!</button>
+        </div>
+
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-google"></i></a>
+        </div>
+
+        <footer>
+            © 2025 Site Under Maintenance. All rights reserved | Design by <a href="https://w3layouts.com" style="color: #fff; text-decoration: none;">W3Layouts</a>
+        </footer>
     </div>
+
+    <script>
+        // Countdown Timer Script
+        const targetDate = new Date("January 1, 2033 00:00:00").getTime();
+
+        const updateTimer = () => {
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            document.getElementById("days").textContent = days;
+            document.getElementById("hours").textContent = hours;
+            document.getElementById("minutes").textContent = minutes;
+            document.getElementById("seconds").textContent = seconds;
+        };
+
+        setInterval(updateTimer, 1000);
+    </script>
+
+    <!-- FontAwesome for social icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
