@@ -1,243 +1,112 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ammar M. Alshehri - Cybersecurity Specialist</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500&display=swap" rel="stylesheet">
-    <style>
-        /* General Reset */
-        body, h1, h2, h3, p, div, a {
-            margin: 0;
-            padding: 0;
-            text-decoration: none;
-            box-sizing: border-box;
-        }
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-        body {
-            font-family: 'Rajdhani', sans-serif;
-            background: linear-gradient(180deg, #0d0d0d, #1a1a1a);
-            color: #fff;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: white;
+}
 
-        /* Header Section */
-        header {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            background: linear-gradient(180deg, #000000, #002b36);
-        }
+header {
+  background: #1a1a2e;
+  padding: 1rem 2rem;
+}
 
-        .logo-container {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
 
-        .main-logo {
-            width: 250px; /* Adjust size */
-            animation: pulse 3s infinite ease-in-out;
-        }
+.nav-links li {
+  margin-left: 20px;
+}
 
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-                filter: drop-shadow(0 0 10px #ff8c00);
-            }
-            50% {
-                transform: scale(1.1);
-                filter: drop-shadow(0 0 20px #ff8c00);
-            }
-            100% {
-                transform: scale(1);
-                filter: drop-shadow(0 0 10px #ff8c00);
-            }
-        }
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-        .header-content {
-            margin-top: 20px;
-            animation: fadeIn 2s ease-out;
-        }
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #6c63ff;
+  float: left;
+}
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: linear-gradient(135deg, #6c63ff, #302b63, #0f0c29);
+}
 
-        h1 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 3rem;
-            margin-bottom: 10px;
-            color: #00f2ff;
-            text-shadow: 0 0 10px #00f2ff;
-        }
+.hero h1 {
+  font-size: 3rem;
+}
 
-        p {
-            font-size: 1.5rem;
-            color: #ddd;
-            margin-bottom: 20px;
-        }
+.hero h1 span {
+  color: #f72585;
+}
 
-        .cta-btn {
-            padding: 15px 30px;
-            background: linear-gradient(90deg, #ff8c00, #ff007a);
-            border: none;
-            border-radius: 30px;
-            color: #fff;
-            font-weight: bold;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-        }
+.hero p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
 
-        .cta-btn:hover {
-            background: linear-gradient(90deg, #ff007a, #00f2ff);
-            transform: scale(1.1);
-        }
+.cta {
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
-        /* Section Styling */
-        section {
-            padding: 60px 20px;
-            text-align: center;
-        }
+.cta:hover {
+  background-color: #4a47d6;
+}
 
-        .about, .experience {
-            background-color: #1a1a1a;
-            box-shadow: 0 0 20px rgba(255, 140, 0, 0.5);
-        }
+.features {
+  padding: 2rem 1rem;
+  text-align: center;
+}
 
-        .skills {
-            background-color: #333;
-            box-shadow: 0 0 20px rgba(0, 242, 255, 0.5);
-        }
+.features h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #f72585;
+}
 
-        h2 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 0 2rem;
+}
 
-        .skill-set {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
+.card {
+  background: #1a1a2e;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
 
-        .skill {
-            background-color: #444;
-            padding: 15px 30px;
-            border-radius: 10px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            animation: glow 2s infinite alternate;
-        }
+.card:hover {
+  transform: translateY(-10px);
+}
 
-        @keyframes glow {
-            from {
-                filter: drop-shadow(0 0 5px #ff8c00);
-            }
-            to {
-                filter: drop-shadow(0 0 15px #00f2ff);
-            }
-        }
-
-        footer {
-            background-color: #000;
-            color: #666;
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        footer p {
-            font-size: 0.9rem;
-        }
-
-        /* Animations */
-        @keyframes slideIn {
-            0% {
-                transform: translateX(-100%);
-                opacity: 0;
-            }
-            100% {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        .experience-item {
-            animation: slideIn 1s ease-out;
-        }
-
-        /* Add Extra Glow for Buttons */
-        .cta-btn, .skill {
-            animation: pulseGlow 2s infinite alternate;
-        }
-
-        @keyframes pulseGlow {
-            0% {
-                filter: drop-shadow(0 0 10px #ff8c00);
-            }
-            100% {
-                filter: drop-shadow(0 0 20px #00f2ff);
-            }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="logo-container">
-            <img src="ag38.me_Logo.png" alt="Ammar M. Alshehri Logo" class="main-logo">
-        </div>
-        <div class="header-content">
-            <h1>Ammar M. Alshehri</h1>
-            <p>Cybersecurity Analyst at JIGPC | Transforming IT infrastructure with innovation and expertise.</p>
-            <a href="#about" class="cta-btn">Learn More</a>
-        </div>
-    </header>
-    <section id="about" class="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>I specialize in cybersecurity solutions, protecting organizational data, and designing robust IT infrastructures.</p>
-        </div>
-    </section>
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2>Professional Skills</h2>
-            <div class="skill-set">
-                <div class="skill">Cybersecurity</div>
-                <div class="skill">Risk Assessment</div>
-                <div class="skill">Data Protection</div>
-                <div class="skill">Network Security</div>
-            </div>
-        </div>
-    </section>
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2>Work Experience</h2>
-            <div class="experience-item">
-                <h3>Cyber Security Analyst at JIGPC</h3>
-                <p>Leading innovative projects to enhance security measures and protect organizational data.</p>
-            </div>
-            <div class="experience-item">
-                <h3>IT Security Consultant</h3>
-                <p>Provided expert consultancy on IT security strategies and implementations for various corporations.</p>
-            </div>
-        </div>
-    </section>
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Ammar M. Alshehri. All Rights Reserved.</p>
-        </div>
-    </footer>
-</body>
-</html>
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #1a1a2e;
+  margin-top: 2rem;
+}
