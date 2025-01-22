@@ -3,179 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Under Maintenance</title>
+    <title>Cybersecurity Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
-            padding: 0;
             font-family: 'Poppins', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            background-color: #0a0a0a;
             color: #fff;
-            text-align: center;
         }
 
         .container {
             width: 90%;
-            max-width: 600px;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-            position: relative;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
         }
 
-        /* Logo Styling */
-        .logo {
+        /* Header Section */
+        .header {
             display: flex;
-            justify-content: center;
             align-items: center;
-            margin-bottom: 20px;
+            padding: 20px 0;
+            border-bottom: 2px solid #1e1e1e;
         }
 
-        .logo img {
-            width: 60px;
-            height: 60px;
-            margin-right: 10px;
+        .header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-right: 20px;
         }
 
-        .logo h2 {
-            font-size: 1.5rem;
-            font-weight: 700;
+        .header h1 {
+            font-size: 2.5rem;
             margin: 0;
-            color: #fff;
         }
 
-        h1 {
-            font-size: 2.5rem;
+        .header p {
+            font-size: 1.2rem;
+            color: #999;
+            margin: 5px 0 0;
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-size: 1.8rem;
+            margin: 30px 0 20px;
+            color: #1e90ff;
+            border-bottom: 2px solid #1e90ff;
+            display: inline-block;
+        }
+
+        /* About Section */
+        .about {
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+
+        /* Work Experience Section */
+        .experience .item {
             margin-bottom: 20px;
         }
 
-        p {
-            font-size: 1.1rem;
-            margin-bottom: 30px;
+        .experience .item h3 {
+            font-size: 1.3rem;
+            margin: 0;
         }
 
-        .timer {
-            display: flex;
-            justify-content: space-around;
-            margin: 30px 0;
+        .experience .item p {
+            margin: 5px 0;
+            color: #999;
         }
 
-        .time-block {
-            text-align: center;
+        /* Skills Section */
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
         }
 
-        .time-block span {
-            display: block;
-            font-size: 2.5rem;
-            font-weight: 700;
-        }
-
-        .email-form {
-            margin: 20px 0;
-        }
-
-        .email-form input {
+        .skills .skill {
+            background-color: #1e1e1e;
             padding: 15px;
-            width: 70%;
-            max-width: 350px;
-            border: none;
-            border-radius: 50px;
-            outline: none;
-            margin-right: 10px;
+            border-radius: 8px;
+            text-align: center;
             font-size: 1rem;
         }
 
-        .email-form button {
-            padding: 15px 20px;
-            border: none;
-            border-radius: 50px;
-            background: #fff;
-            color: #2575fc;
-            font-size: 1rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .email-form button:hover {
-            background: #2575fc;
-            color: #fff;
-        }
-
+        /* Footer */
         footer {
-            margin-top: 20px;
+            text-align: center;
+            margin-top: 40px;
             font-size: 0.9rem;
+            color: #999;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Logo Section -->
-        <div class="logo">
-            <img src="logo.png" alt="AMS Logo">
-            <h2>AMS</h2>
-        </div>
-
-        <h1>Site Under Maintenance</h1>
-        <p>We're working hard to improve our website. Please check back soon!</p>
-
-        <!-- Countdown Timer -->
-        <div class="timer" id="timer">
-            <div class="time-block">
-                <span id="days">0</span>
-                Days
-            </div>
-            <div class="time-block">
-                <span id="hours">0</span>
-                Hours
-            </div>
-            <div class="time-block">
-                <span id="minutes">0</span>
-                Minutes
-            </div>
-            <div class="time-block">
-                <span id="seconds">0</span>
-                Seconds
+        <!-- Header -->
+        <div class="header">
+            <img src="your-photo.jpg" alt="Profile Picture">
+            <div>
+                <h1>Ammar M. Alshehri</h1>
+                <p>Cybersecurity Specialist</p>
             </div>
         </div>
 
-        <!-- Email Form -->
-        <div class="email-form">
-            <input type="email" placeholder="Enter your email" id="email">
-            <button onclick="alert('Thank you!')">Get Notified!</button>
+        <!-- About Section -->
+        <div class="about">
+            <h2 class="section-title">About Me</h2>
+            <p>
+                I am a passionate cybersecurity specialist with over X years of experience in IT and security. I specialize in protecting organizations against cyber threats, improving IT infrastructure, and ensuring compliance with security standards.
+            </p>
         </div>
 
+        <!-- Work Experience Section -->
+        <div class="experience">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="item">
+                <h3>Cybersecurity Analyst</h3>
+                <p>Company Name | 2020 - Present</p>
+                <p>Responsible for managing IT security operations and ensuring compliance with organizational policies.</p>
+            </div>
+            <div class="item">
+                <h3>IT Administrator</h3>
+                <p>Previous Company | 2015 - 2020</p>
+                <p>Managed IT systems and provided technical support to ensure business continuity.</p>
+            </div>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="skills">
+            <div class="skill">Cybersecurity</div>
+            <div class="skill">Network Security</div>
+            <div class="skill">Incident Response</div>
+            <div class="skill">Risk Management</div>
+            <div class="skill">IT Administration</div>
+        </div>
+
+        <!-- Footer -->
         <footer>
-            © 2025 Site Under Maintenance. All rights reserved.
+            &copy; 2025 Ammar M. Alshehri. All rights reserved.
         </footer>
     </div>
-
-    <script>
-        // Countdown Timer Script
-        const targetDate = new Date("January 1, 2033 00:00:00").getTime();
-
-        const updateTimer = () => {
-            const now = new Date().getTime();
-            const difference = targetDate - now;
-
-            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-            document.getElementById("days").textContent = days;
-            document.getElementById("hours").textContent = hours;
-            document.getElementById("minutes").textContent = minutes;
-            document.getElementById("seconds").textContent = seconds;
-        };
-
-        setInterval(updateTimer, 1000);
-    </script>
 </body>
 </html>
