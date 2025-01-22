@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cybersecurity Portfolio</title>
+    <title>Ammar M. Alshehri | Cybersecurity Specialist</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -11,26 +11,22 @@
             font-family: 'Poppins', sans-serif;
             background-color: #0a0a0a;
             color: #fff;
+            text-align: center;
+            padding: 0 20px;
         }
 
         .container {
-            width: 90%;
-            max-width: 1200px;
+            max-width: 800px;
             margin: auto;
-            padding: 20px;
         }
 
         /* Header Section */
         .header {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            padding: 20px 0;
-            border-bottom: 2px solid #1e1e1e;
+            margin-top: 40px;
         }
 
         .header img {
-            width: 150px;
+            width: 120px;
             height: auto;
             margin-bottom: 20px;
         }
@@ -42,58 +38,55 @@
 
         .header p {
             font-size: 1.2rem;
-            color: #999;
-            margin: 5px 0 0;
+            color: #1e90ff;
+            margin: 5px 0;
         }
 
         /* Section Titles */
         .section-title {
             font-size: 1.8rem;
-            margin: 30px 0 20px;
             color: #1e90ff;
-            border-bottom: 2px solid #1e90ff;
-            display: inline-block;
+            margin: 40px 0 20px;
+            text-align: left;
         }
 
-        /* About Section */
-        .about {
-            margin: 20px 0;
-            line-height: 1.6;
+        .about, .work-experience, .skills {
+            text-align: left;
         }
 
-        /* Work Experience Section */
-        .experience .item {
+        /* Work Experience */
+        .work-item {
             margin-bottom: 20px;
         }
 
-        .experience .item h3 {
-            font-size: 1.3rem;
+        .work-item h3 {
             margin: 0;
+            font-size: 1.5rem;
         }
 
-        .experience .item p {
+        .work-item p {
             margin: 5px 0;
             color: #999;
         }
 
         /* Skills Section */
         .skills {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         .skills .skill {
+            padding: 10px 15px;
             background-color: #1e1e1e;
-            padding: 15px;
             border-radius: 8px;
-            text-align: center;
+            color: #fff;
             font-size: 1rem;
+            text-align: center;
         }
 
         /* Footer */
         footer {
-            text-align: center;
             margin-top: 40px;
             font-size: 0.9rem;
             color: #999;
@@ -109,31 +102,32 @@
             <p>Cybersecurity Specialist</p>
         </div>
 
-        <!-- About Section -->
+        <!-- About Me -->
         <div class="about">
             <h2 class="section-title">About Me</h2>
             <p>
-                I am a passionate cybersecurity specialist with over X years of experience in IT and security. I specialize in protecting organizations against cyber threats, improving IT infrastructure, and ensuring compliance with security standards.
+                I am a passionate cybersecurity specialist with years of experience in IT and security. I specialize in protecting organizations against cyber threats, improving IT infrastructure, and ensuring compliance with security standards.
             </p>
         </div>
 
-        <!-- Work Experience Section -->
-        <div class="experience">
+        <!-- Work Experience -->
+        <div class="work-experience">
             <h2 class="section-title">Work Experience</h2>
-            <div class="item">
+            <div class="work-item">
                 <h3>Cybersecurity Analyst</h3>
                 <p>Company Name | 2020 - Present</p>
                 <p>Responsible for managing IT security operations and ensuring compliance with organizational policies.</p>
             </div>
-            <div class="item">
+            <div class="work-item">
                 <h3>IT Administrator</h3>
                 <p>Previous Company | 2015 - 2020</p>
                 <p>Managed IT systems and provided technical support to ensure business continuity.</p>
             </div>
         </div>
 
-        <!-- Skills Section -->
+        <!-- Skills -->
         <div class="skills">
+            <h2 class="section-title">Skills</h2>
             <div class="skill">Cybersecurity</div>
             <div class="skill">Network Security</div>
             <div class="skill">Incident Response</div>
