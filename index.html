@@ -1,176 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ammar M. Alshehri | Cybersecurity Analyst</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Rajdhani', sans-serif;
-            background: #111;
-            color: #fff;
-            padding: 0 20px;
-            overflow-x: hidden;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ammar M. Alshehri | Cybersecurity Analyst</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      scroll-behavior: smooth;
+      background: #111;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
 
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 30px;
-        }
+    /* Header (Navigation & Hero) */
+    header {
+      position: relative;
+      height: 100vh;
+      background: url('hero-image.jpg') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    header .content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 0 20px;
+    }
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    header p {
+      font-size: 1.3rem;
+      margin-bottom: 30px;
+    }
+    header .cta-btn {
+      padding: 15px 30px;
+      font-size: 1rem;
+      border: 2px solid #fff;
+      border-radius: 50px;
+      transition: background 0.3s, color 0.3s;
+    }
+    header .cta-btn:hover {
+      background: #fff;
+      color: #111;
+    }
 
-        /* Header */
-        .header {
-            text-align: center;
-            margin-top: 40px;
-        }
+    /* Section Layouts */
+    section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .section-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2rem;
+      margin-bottom: 40px;
+      position: relative;
+      display: inline-block;
+    }
+    .section-title::after {
+      content: '';
+      height: 4px;
+      width: 50%;
+      background: #fff;
+      position: absolute;
+      left: 50%;
+      bottom: -10px;
+      transform: translateX(-50%);
+    }
 
-        .header img {
-            width: 150px;
-            height: auto;
-            margin-bottom: 20px;
-            filter: drop-shadow(0 0 10px #39ff14);
-        }
+    /* About Section */
+    .about {
+      background: #222;
+    }
+    .about p {
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.6;
+    }
 
-        .header h1 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 3rem;
-            color: #39ff14;
-            text-shadow: 0 0 15px #39ff14, 0 0 30px #39ff14;
-        }
+    /* Work Experience & Skills Sections - simplified placeholders */
+    .work-experience, .skills {
+      background: #111;
+    }
+    .work-experience .work-item, .skills .skill {
+      margin-bottom: 20px;
+      padding: 20px;
+      background: #222;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    .work-experience .work-item:hover, .skills .skill:hover {
+      transform: translateY(-5px);
+    }
 
-        .header p {
-            font-size: 1.3rem;
-            color: #00ffff;
-            margin: 10px 0;
-            text-shadow: 0 0 10px #00ffff, 0 0 15px #00ffff;
-        }
-
-        /* About Me */
-        .about {
-            text-align: left;
-        }
-
-        .section-title {
-            font-size: 2rem;
-            color: #ff00ff;
-            margin: 50px 0 20px;
-            text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
-        }
-
-        .about p {
-            font-size: 1.2rem;
-            color: #ccc;
-        }
-
-        /* Work Experience */
-        .work-item {
-            margin-bottom: 30px;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        .work-item:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 30px #ff00ff;
-        }
-
-        .work-item h3 {
-            font-size: 1.5rem;
-            color: #00ffff;
-            text-shadow: 0 0 10px #00ffff, 0 0 15px #00ffff;
-        }
-
-        .work-item p {
-            margin: 5px 0;
-            color: #ccc;
-        }
-
-        /* Skills Section */
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            justify-content: center;
-        }
-
-        .skills .skill {
-            padding: 15px 20px;
-            background: rgba(0, 255, 255, 0.2);
-            border: 2px solid #ff00ff;
-            border-radius: 8px;
-            color: #fff;
-            font-size: 1.2rem;
-            text-align: center;
-            text-shadow: 0 0 10px #ff00ff;
-            transition: background 0.3s, transform 0.3s;
-        }
-
-        .skills .skill:hover {
-            background: #ff00ff;
-            transform: scale(1.05);
-            box-shadow: 0 0 15px #ff00ff;
-        }
-
-        footer {
-            margin-top: 60px;
-            font-size: 0.9rem;
-            color: #999;
-            text-shadow: 0 0 5px #fff;
-        }
-    </style>
+    /* Footer */
+    footer {
+      padding: 40px 20px;
+      background: #000;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <div class="header">
-            <img src="ag38.me_Logo.png" alt="AMS Logo">
-            <h1>Ammar M. Alshehri</h1>
-            <p>Cybersecurity Analyst | JIGPC</p>
-        </div>
-
-        <!-- About Me -->
-        <div class="about">
-            <h2 class="section-title">About Me</h2>
-            <p>
-                As a visionary in the fields of IT system administration and cybersecurity, I bring over five years of transformative experience. I specialize in designing, implementing, and optimizing cutting-edge IT infrastructure and cybersecurity solutions. Let's connect to innovate and redefine the future of technology.
-            </p>
-        </div>
-
-        <!-- Work Experience -->
-        <div class="work-experience">
-            <h2 class="section-title">Work Experience</h2>
-            <div class="work-item">
-                <h3>Cybersecurity Analyst</h3>
-                <p>JIGPC | 2020 - Present</p>
-                <p>Developing and implementing cybersecurity strategies, including risk assessments and DLP solutions to enhance organizational security.</p>
-            </div>
-            <div class="work-item">
-                <h3>IT Systems Administrator</h3>
-                <p>Jazan Gas Projects Company | 2016 - 2020</p>
-                <p>Optimized IT infrastructure and supported organizational systems to ensure operational continuity.</p>
-            </div>
-        </div>
-
-        <!-- Skills -->
-        <div class="skills">
-            <h2 class="section-title">Skills</h2>
-            <div class="skill">Cybersecurity</div>
-            <div class="skill">IT Infrastructure Management</div>
-            <div class="skill">Data Loss Prevention</div>
-            <div class="skill">Risk Management</div>
-            <div class="skill">Incident Response</div>
-        </div>
-
-        <!-- Footer -->
-        <footer>
-            &copy; 2025 Ammar M. Alshehri. All rights reserved.
-        </footer>
+  <!-- Header with Hero Section -->
+  <header>
+    <div class="content">
+      <h1>Ammar M. Alshehri</h1>
+      <p>Cybersecurity Analyst at JIGPC | Transforming IT infrastructure with innovation and expertise.</p>
+      <a href="#about" class="cta-btn">Learn More</a>
     </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2 class="section-title">About Me</h2>
+    <p>
+      As a visionary in IT system administration and cybersecurity, I bring over five years of transformative experience. I specialize in designing, implementing, and optimizing advanced IT infrastructure and security solutions to drive innovation and operational excellence.
+    </p>
+  </section>
+
+  <!-- Work Experience Section (Placeholder) -->
+  <section class="work-experience">
+    <h2 class="section-title">Work Experience</h2>
+    <div class="work-item">
+      <h3>Cybersecurity Analyst at JIGPC</h3>
+      <p>Developing and implementing strategies to safeguard IT infrastructure.</p>
+    </div>
+    <div class="work-item">
+      <h3>IT Systems Administrator</h3>
+      <p>Optimized IT infrastructure to ensure business continuity.</p>
+    </div>
+  </section>
+
+  <!-- Skills Section (Placeholder) -->
+  <section class="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="skill">Cybersecurity</div>
+    <div class="skill">IT Infrastructure Management</div>
+    <div class="skill">Data Loss Prevention</div>
+    <div class="skill">Risk Management</div>
+    <div class="skill">Incident Response</div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Ammar M. Alshehri. All rights reserved.
+  </footer>
 </body>
 </html>
