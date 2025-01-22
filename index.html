@@ -6,7 +6,16 @@
     <title>Cyber - Futuristic Tech</title>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        /* Base styles */
+        :root {
+            --color-gold: #ffd700;
+            --color-dark-green: #004d40;
+            --color-pink: #ff1493;
+            --color-purple: #9c27b0;
+            --color-cyan: #00ffff;
+            --color-blue: #0077ff;
+            --color-red: #ff0033;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -15,12 +24,11 @@
         }
 
         body {
-            background-color: black;
+            background-color: #001a1a;
             color: white;
             line-height: 1.5;
         }
 
-        /* Utility classes */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -43,25 +51,29 @@
             display: grid;
         }
 
-        /* Components */
         .top-banner {
-            background: linear-gradient(to right, #e11d48, #7e22ce);
+            background: linear-gradient(45deg, var(--color-red), var(--color-purple), var(--color-blue));
             padding: 0.5rem;
             text-align: center;
             font-size: 0.875rem;
+            text-shadow: 0 0 10px var(--color-cyan);
         }
 
         .nav {
             padding: 1rem 0;
+            background: rgba(0, 26, 26, 0.95);
+            border-bottom: 1px solid var(--color-cyan);
         }
 
         .nav-logo {
             font-size: 1.5rem;
             font-weight: bold;
+            color: var(--color-gold);
+            text-shadow: 0 0 10px var(--color-gold);
         }
 
         .nav-logo span {
-            color: #e11d48;
+            color: var(--color-cyan);
         }
 
         .nav-links {
@@ -69,14 +81,16 @@
         }
 
         .nav-links a {
-            color: white;
+            color: var(--color-cyan);
             text-decoration: none;
             margin-left: 2rem;
-            transition: color 0.3s;
+            transition: all 0.3s;
+            text-shadow: 0 0 5px var(--color-cyan);
         }
 
         .nav-links a:hover {
-            color: #e11d48;
+            color: var(--color-pink);
+            text-shadow: 0 0 10px var(--color-pink);
         }
 
         .nav-buttons button {
@@ -84,24 +98,29 @@
             border: none;
             border-radius: 9999px;
             cursor: pointer;
-            transition: opacity 0.3s;
+            transition: all 0.3s;
+            font-weight: bold;
         }
 
         .nav-buttons button:first-child {
             background: transparent;
-            color: #e11d48;
+            color: var(--color-gold);
+            border: 1px solid var(--color-gold);
+            text-shadow: 0 0 5px var(--color-gold);
         }
 
         .nav-buttons button:last-child {
-            background: linear-gradient(to right, #e11d48, #7e22ce);
+            background: linear-gradient(45deg, var(--color-pink), var(--color-purple), var(--color-blue));
             color: white;
             margin-left: 1rem;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
         }
 
         .hero {
             padding: 5rem 0;
             position: relative;
             overflow: hidden;
+            background: linear-gradient(to bottom, var(--color-dark-green), #001a1a);
         }
 
         .hero::before {
@@ -114,7 +133,8 @@
             background-image: url('https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?auto=format&fit=crop&q=80&w=3000');
             background-size: cover;
             background-position: center;
-            opacity: 0.1;
+            opacity: 0.15;
+            mix-blend-mode: screen;
         }
 
         .hero-content {
@@ -126,35 +146,40 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            color: #e11d48;
+            color: var(--color-gold);
             margin-bottom: 1rem;
+            text-shadow: 0 0 10px var(--color-gold);
         }
 
         .hero-tag .dot {
             width: 8px;
             height: 8px;
-            background-color: #e11d48;
+            background-color: var(--color-gold);
             border-radius: 50%;
             animation: pulse 2s infinite;
+            box-shadow: 0 0 15px var(--color-gold);
         }
 
         .hero-title {
             font-size: 4rem;
             line-height: 1.1;
             margin-bottom: 1.5rem;
+            color: white;
+            text-shadow: 0 0 20px var(--color-cyan);
         }
 
         .hero-title .gradient-text {
-            background: linear-gradient(to right, #e11d48, #7e22ce);
+            background: linear-gradient(45deg, var(--color-pink), var(--color-purple), var(--color-blue));
             -webkit-background-clip: text;
             color: transparent;
             display: block;
         }
 
         .hero-description {
-            color: #9ca3af;
+            color: var(--color-cyan);
             font-size: 1.25rem;
             margin-bottom: 2rem;
+            text-shadow: 0 0 10px var(--color-cyan);
         }
 
         .hero-buttons {
@@ -167,26 +192,28 @@
             border-radius: 9999px;
             font-weight: 500;
             cursor: pointer;
-            transition: opacity 0.3s;
+            transition: all 0.3s;
         }
 
         .hero-buttons button:first-child {
-            background: linear-gradient(to right, #e11d48, #7e22ce);
+            background: linear-gradient(45deg, var(--color-pink), var(--color-purple), var(--color-blue));
             border: none;
             color: white;
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
         }
 
         .hero-buttons button:last-child {
             background: transparent;
-            border: 1px solid #e11d48;
-            color: #e11d48;
+            border: 1px solid var(--color-gold);
+            color: var(--color-gold);
+            text-shadow: 0 0 10px var(--color-gold);
         }
 
         .stats {
-            background: linear-gradient(to bottom, black, #111827);
+            background: linear-gradient(to bottom, #001a1a, var(--color-dark-green));
             padding: 5rem 0;
         }
 
@@ -199,33 +226,42 @@
         .stat-number {
             font-size: 2.5rem;
             font-weight: bold;
-            background: linear-gradient(to right, #e11d48, #7e22ce);
+            background: linear-gradient(45deg, var(--color-gold), var(--color-cyan));
             -webkit-background-clip: text;
             color: transparent;
             margin-bottom: 0.5rem;
+            text-shadow: 0 0 15px var(--color-cyan);
         }
 
         .stat-label {
-            color: #9ca3af;
+            color: var(--color-cyan);
+            text-shadow: 0 0 5px var(--color-cyan);
         }
 
         .features {
             padding: 5rem 0;
             position: relative;
             overflow: hidden;
+            background: linear-gradient(to bottom, var(--color-dark-green), #001a1a);
         }
 
         .features::before {
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(to right, rgba(219, 39, 119, 0.1), rgba(124, 58, 237, 0.1));
+            background: linear-gradient(45deg, 
+                rgba(255, 215, 0, 0.1),
+                rgba(0, 255, 255, 0.1),
+                rgba(255, 20, 147, 0.1)
+            );
         }
 
         .features-title {
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 4rem;
+            color: var(--color-gold);
+            text-shadow: 0 0 15px var(--color-gold);
         }
 
         .features-grid {
@@ -237,27 +273,37 @@
         .feature-card {
             padding: 1.5rem;
             border-radius: 1rem;
-            background: linear-gradient(to bottom, #111827, black);
-            border: 1px solid rgba(219, 39, 119, 0.2);
-            transition: border-color 0.3s;
+            background: rgba(0, 26, 26, 0.8);
+            border: 1px solid var(--color-cyan);
+            transition: all 0.3s;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
         }
 
         .feature-card:hover {
-            border-color: rgba(219, 39, 119, 0.4);
+            border-color: var(--color-gold);
+            transform: translateY(-5px);
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
         }
 
+        .feature-card:nth-child(1) .feature-icon { color: var(--color-pink); }
+        .feature-card:nth-child(2) .feature-icon { color: var(--color-cyan); }
+        .feature-card:nth-child(3) .feature-icon { color: var(--color-gold); }
+        .feature-card:nth-child(4) .feature-icon { color: var(--color-blue); }
+
         .feature-icon {
-            color: #e11d48;
             margin-bottom: 1rem;
+            filter: drop-shadow(0 0 10px currentColor);
         }
 
         .feature-title {
             font-size: 1.25rem;
             margin-bottom: 0.5rem;
+            color: white;
+            text-shadow: 0 0 10px var(--color-cyan);
         }
 
         .feature-description {
-            color: #9ca3af;
+            color: var(--color-cyan);
         }
 
         @keyframes pulse {
