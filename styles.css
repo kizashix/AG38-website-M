@@ -1,4 +1,4 @@
-/* General Reset */
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -6,23 +6,24 @@
   }
   
   body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-    color: white;
+    font-family: 'Roboto', sans-serif;
+    background: #0d1117;
+    color: #c9d1d9;
     line-height: 1.6;
   }
   
-  /* Container */
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
+  a {
+    text-decoration: none;
+    color: inherit;
   }
   
   /* Header */
   header {
-    background: #1a1a2e;
-    padding: 1rem 0;
+    background: #161b22;
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
   }
   
   header nav {
@@ -31,91 +32,89 @@
     align-items: center;
   }
   
+  .logo {
+    font-size: 1.5rem;
+    color: #58a6ff;
+  }
+  
   .nav-menu {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 1.5rem;
   }
   
   .nav-menu a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .nav-menu a:hover {
+    color: #58a6ff;
   }
   
   /* Hero Section */
   .hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 4rem 1rem;
-    background: linear-gradient(135deg, #6c63ff, #302b63, #0f0c29);
+    background: linear-gradient(135deg, #0d47a1, #001f3f);
+    color: white;
   }
   
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
   }
   
-  .hero h1 span {
-    color: #f72585;
-  }
-  
   .hero p {
-    font-size: 1.2rem;
     margin-bottom: 2rem;
   }
   
-  .hero button {
-    background: #6c63ff;
+  .hero .btn {
+    background: #58a6ff;
     color: white;
-    border: none;
     padding: 0.8rem 1.5rem;
-    font-size: 1rem;
     border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
+    font-weight: bold;
+    transition: background 0.3s;
   }
   
-  .hero button:hover {
-    background: #4a47d6;
+  .hero .btn:hover {
+    background: #1b75e7;
   }
   
-  /* Features Section */
-  .features {
-    padding: 3rem 0;
+  /* Section Styling */
+  section {
+    padding: 4rem 2rem;
     text-align: center;
   }
   
-  .features h2 {
-    font-size: 2rem;
-    color: #f72585;
-    margin-bottom: 2rem;
-  }
-  
-  .feature-cards {
+  /* Pricing */
+  .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
   }
   
-  .card {
-    background: #1a1a2e;
-    padding: 1.5rem;
-    border-radius: 10px;
+  .pricing-card {
+    background: #161b22;
+    padding: 2rem;
+    border-radius: 8px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s;
   }
   
-  .card:hover {
-    transform: scale(1.05);
+  .pricing-card:hover {
+    transform: translateY(-10px);
   }
   
   /* Footer */
   footer {
-    background: #1a1a2e;
-    padding: 1.5rem 0;
+    background: #161b22;
+    padding: 2rem;
     text-align: center;
-    font-size: 0.9rem;
-    color: #ccc;
+    color: #586069;
   }
   
