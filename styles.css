@@ -17,9 +17,15 @@ header {
   padding: 20px 0; 
 }
 
-.logo img {
-  height: 40px; 
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #ec4899, #8b5cf6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
+
 
 .contact-info {
   text-align: right; 
