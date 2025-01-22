@@ -1,4 +1,4 @@
-document.querySelector('.linkedin-btn').addEventListener('click', () => {
-    console.log('LinkedIn profile clicked!');
-  });
-  
+// Example of tracking "Get Started" button click
+document.querySelector('.btn').addEventListener('click', () => {
+  alert('Thank you for choosing AMS!');
+});
