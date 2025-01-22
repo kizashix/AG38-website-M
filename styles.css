@@ -44,10 +44,16 @@
     font-size: 1rem;
   }
   
+  /* Logo */
   .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #6c63ff;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-img {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
   }
   
   /* Hero Section */
@@ -55,6 +61,12 @@
     text-align: center;
     padding: 4rem 1rem;
     background: linear-gradient(135deg, #6c63ff, #302b63, #0f0c29);
+  }
+  
+  .hero-logo {
+    height: 100px;
+    width: auto;
+    margin-bottom: 20px;
   }
   
   .hero h1 {
