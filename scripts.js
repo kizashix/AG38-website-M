@@ -1,4 +1,5 @@
-// Example of tracking "Get Started" button click
-document.querySelector('.btn').addEventListener('click', () => {
-  alert('Thank you for choosing AMS!');
+document.querySelectorAll('.btn').forEach(button => {
+  button.addEventListener('click', function() {
+    alert('Thank you for contacting us!');
+  });
 });
