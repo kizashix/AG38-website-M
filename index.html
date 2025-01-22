@@ -3,14 +3,14 @@
 <head>  
     <meta charset="UTF-8">  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>Cyber Futuristic Tech Website</title>  
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">   
+    <title>Cyber - Futuristic Tech Website</title>  
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">  
     <style>  
         body {  
             margin: 0;  
             font-family: 'Roboto', sans-serif;  
+            background-color: #0c0c0c;  
             color: #fff;  
-            background-color: #111;  
         }  
 
         /* Header */  
@@ -20,6 +20,8 @@
             align-items: center;  
             padding: 20px;  
             background-color: #222;  
+            position: relative;  
+            z-index: 1;  
         }  
 
         .nav ul {  
@@ -50,13 +52,19 @@
             align-items: center;  
             text-align: center;  
             position: relative;  
+            color: #00ffcc;  
+            z-index: 1;  
         }  
 
         .banner h1 {  
-            font-size: 3rem;  
+            font-size: 4rem;  
             margin: 0;  
-            color: #00ffcc;  
             text-shadow: 0 0 10px rgba(0, 255, 204, 0.7);  
+        }  
+
+        .banner p {  
+            font-size: 1.5rem;  
+            color: #ddd;  
         }  
 
         .discover-button {  
@@ -77,16 +85,16 @@
         /* Features Section */  
         .features {  
             display: grid;  
-            grid-template-columns: repeat(2, 1fr);  
+            grid-template-columns: repeat(4, 1fr);  
             gap: 20px;  
-            padding: 40px;  
-            background-color: #222;  
+            padding: 40px 20px;  
+            background-color: #1a1a1a;  
         }  
 
         .feature-item {  
             background: #333;  
             border-radius: 10px;  
-            padding: 20px;  
+            padding: 30px;  
             text-align: center;  
             transition: transform 0.3s;  
         }  
@@ -114,10 +122,11 @@
         .pushing-boundaries h2 {  
             color: #ff007f;  
             margin-bottom: 10px;  
+            font-size: 2.5rem;  
         }  
 
         .pushing-boundaries p {  
-            color: #bbb;  
+            color: #ddd;  
             margin: 20px 0;  
         }  
 
@@ -139,18 +148,21 @@
         /* Bottom Section */  
         .technology-future {  
             padding: 40px;  
-            background-color: #222;  
+            background-color: #1a1a1a;  
             text-align: center;  
         }  
 
         .technology-future h2 {  
             color: #00ffcc;  
+            font-size: 2rem;  
         }  
 
         .technology-future ul {  
             list-style: none;  
             padding: 0;  
             color: #bbb;  
+            font-size: 1.2rem;  
+            margin-top: 20px;  
         }  
 
         .technology-future li {  
@@ -162,6 +174,14 @@
             .features {  
                 grid-template-columns: 1fr;  
             }  
+
+            .banner h1 {  
+                font-size: 2.5rem;  
+            }  
+
+            .banner p {  
+                font-size: 1rem;  
+            }  
         }  
     </style>  
 </head>  
@@ -169,7 +189,7 @@
 
     <!-- Header -->  
     <header class="header">  
-        <div class="logo">CyberTech</div>  
+        <div class="logo">Cyber.</div>  
         <nav class="nav">  
             <ul>  
                 <li><a href="#home">Home</a></li>  
@@ -186,6 +206,7 @@
     <!-- Main Banner -->  
     <section class="banner" id="home">  
         <h1>Technology reimagined for a smarter future</h1>  
+        <p>Explore the possibilities</p>  
         <button class="discover-button">Discover More</button>  
     </section>  
 
@@ -193,22 +214,18 @@
     <section class="features">  
         <h2>Why Choose Us</h2>  
         <div class="feature-item">  
-            <i class="fas fa-th-large"></i> <!-- Replace with proper icon -->  
             <h3>Well Organized</h3>  
             <p>Experience a clean, structured design for easy navigation.</p>  
         </div>  
         <div class="feature-item">  
-            <i class="fas fa-paint-brush"></i> <!-- Replace with proper icon -->  
             <h3>Clean and Modern</h3>  
             <p>Our layouts are built with modern aesthetics in mind.</p>  
         </div>  
         <div class="feature-item">  
-            <i class="fas fa-cogs"></i> <!-- Replace with proper icon -->  
             <h3>Easy Customize</h3>  
             <p>Customize your design with ease using our flexible tools.</p>  
         </div>  
         <div class="feature-item">  
-            <i class="fas fa-font"></i> <!-- Replace with proper icon -->  
             <h3>Used Free Fonts</h3>  
             <p>Typography that is both professional and free to use.</p>  
         </div>  
