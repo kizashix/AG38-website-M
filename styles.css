@@ -146,4 +146,40 @@
     margin-right: 10px;
   }
   
+  /* Logo Styling */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .logo img {
+    height: 50px;
+    width: auto;
+  }
+  
+  .logo span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #58a6ff;
+  }
+  
+  /* Footer */
+  footer {
+    background: #161b22;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .footer-logo {
+    height: 50px;
+    width: auto;
+  }
   
