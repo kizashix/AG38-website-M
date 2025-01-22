@@ -4,101 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site Under Maintenance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
+        /* General Body Styling */
         body {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background: url('https://source.unsplash.com/1920x1080/?blur,background') no-repeat center center fixed;
-            background-size: cover;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
             color: #fff;
+            text-align: center;
         }
 
+        /* Container */
         .container {
-            position: relative;
-            top: 50%;
-            transform: translateY(-50%);
+            width: 90%;
             max-width: 600px;
-            margin: auto;
-        }
-
-        .maintenance-icon {
-            margin: 20px auto;
-            display: block;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
         }
 
         h1 {
             font-size: 2.5rem;
-            text-transform: uppercase;
+            margin-bottom: 20px;
         }
 
         p {
             font-size: 1.1rem;
-            margin: 20px 0;
+            margin-bottom: 30px;
         }
 
+        /* Timer */
         .timer {
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
             margin: 30px 0;
         }
 
         .time-block {
-            margin: 0 10px;
             text-align: center;
         }
 
         .time-block span {
             display: block;
-            font-size: 2rem;
-            font-weight: bold;
+            font-size: 2.5rem;
+            font-weight: 700;
         }
 
+        /* Email Form */
         .email-form {
             margin: 20px 0;
         }
 
-        .email-form input[type="email"] {
-            padding: 10px;
+        .email-form input {
+            padding: 15px;
             width: 70%;
+            max-width: 350px;
             border: none;
-            border-radius: 5px;
+            border-radius: 50px;
+            outline: none;
+            margin-right: 10px;
+            font-size: 1rem;
         }
 
         .email-form button {
-            padding: 10px 15px;
+            padding: 15px 20px;
             border: none;
-            border-radius: 5px;
-            background-color: #333;
-            color: #fff;
+            border-radius: 50px;
+            background: #fff;
+            color: #2575fc;
             font-size: 1rem;
+            font-weight: 700;
             cursor: pointer;
+            transition: all 0.3s ease;
         }
 
-        .social-icons {
-            margin: 20px 0;
-        }
-
-        .social-icons a {
-            margin: 0 10px;
-            text-decoration: none;
+        .email-form button:hover {
+            background: #2575fc;
             color: #fff;
-            font-size: 1.5rem;
         }
 
         footer {
             margin-top: 20px;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="https://img.icons8.com/external-flat-juicy-fish/100/000000/external-maintenance-tools-flat-flat-juicy-fish.png" alt="Maintenance Icon" class="maintenance-icon">
         <h1>Site Under Maintenance</h1>
-        <p>Sorry for the inconvenience. To improve our services, we have momentarily shut down our site.</p>
+        <p>We're working hard to improve our website. Please check back soon!</p>
 
+        <!-- Countdown Timer -->
         <div class="timer" id="timer">
             <div class="time-block">
                 <span id="days">0</span>
@@ -118,20 +121,14 @@
             </div>
         </div>
 
+        <!-- Email Form -->
         <div class="email-form">
-            <input type="email" placeholder="Enter your email address" id="email">
+            <input type="email" placeholder="Enter your email" id="email">
             <button onclick="alert('Thank you!')">Get Notified!</button>
         </div>
 
-        <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-google"></i></a>
-        </div>
-
         <footer>
-            © 2025 Site Under Maintenance. All rights reserved | Design by <a href="https://w3layouts.com" style="color: #fff; text-decoration: none;">W3Layouts</a>
+            © 2025 Site Under Maintenance. All rights reserved.
         </footer>
     </div>
 
@@ -156,8 +153,5 @@
 
         setInterval(updateTimer, 1000);
     </script>
-
-    <!-- FontAwesome for social icons -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
