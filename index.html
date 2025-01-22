@@ -1,243 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ammar M. Alshehri - Cybersecurity Specialist</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500&display=swap" rel="stylesheet">
-    <style>
-        /* General Reset */
-        body, h1, h2, h3, p, div, a {
-            margin: 0;
-            padding: 0;
-            text-decoration: none;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Rajdhani', sans-serif;
-            background: linear-gradient(180deg, #0d0d0d, #1a1a1a);
-            color: #fff;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* Header Section */
-        header {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            background: linear-gradient(180deg, #000000, #002b36);
-        }
-
-        .logo-container {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-
-        .main-logo {
-            width: 250px; /* Adjust size */
-            animation: pulse 3s infinite ease-in-out;
-        }
-
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-                filter: drop-shadow(0 0 10px #ff8c00);
-            }
-            50% {
-                transform: scale(1.1);
-                filter: drop-shadow(0 0 20px #ff8c00);
-            }
-            100% {
-                transform: scale(1);
-                filter: drop-shadow(0 0 10px #ff8c00);
-            }
-        }
-
-        .header-content {
-            margin-top: 20px;
-            animation: fadeIn 2s ease-out;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        h1 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 3rem;
-            margin-bottom: 10px;
-            color: #00f2ff;
-            text-shadow: 0 0 10px #00f2ff;
-        }
-
-        p {
-            font-size: 1.5rem;
-            color: #ddd;
-            margin-bottom: 20px;
-        }
-
-        .cta-btn {
-            padding: 15px 30px;
-            background: linear-gradient(90deg, #ff8c00, #ff007a);
-            border: none;
-            border-radius: 30px;
-            color: #fff;
-            font-weight: bold;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-        }
-
-        .cta-btn:hover {
-            background: linear-gradient(90deg, #ff007a, #00f2ff);
-            transform: scale(1.1);
-        }
-
-        /* Section Styling */
-        section {
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        .about, .experience {
-            background-color: #1a1a1a;
-            box-shadow: 0 0 20px rgba(255, 140, 0, 0.5);
-        }
-
-        .skills {
-            background-color: #333;
-            box-shadow: 0 0 20px rgba(0, 242, 255, 0.5);
-        }
-
-        h2 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        .skill-set {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .skill {
-            background-color: #444;
-            padding: 15px 30px;
-            border-radius: 10px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            animation: glow 2s infinite alternate;
-        }
-
-        @keyframes glow {
-            from {
-                filter: drop-shadow(0 0 5px #ff8c00);
-            }
-            to {
-                filter: drop-shadow(0 0 15px #00f2ff);
-            }
-        }
-
-        footer {
-            background-color: #000;
-            color: #666;
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        footer p {
-            font-size: 0.9rem;
-        }
-
-        /* Animations */
-        @keyframes slideIn {
-            0% {
-                transform: translateX(-100%);
-                opacity: 0;
-            }
-            100% {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        .experience-item {
-            animation: slideIn 1s ease-out;
-        }
-
-        /* Add Extra Glow for Buttons */
-        .cta-btn, .skill {
-            animation: pulseGlow 2s infinite alternate;
-        }
-
-        @keyframes pulseGlow {
-            0% {
-                filter: drop-shadow(0 0 10px #ff8c00);
-            }
-            100% {
-                filter: drop-shadow(0 0 20px #00f2ff);
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cyber Security Expert</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="ag38.me_Logo.png" alt="Ammar M. Alshehri Logo" class="main-logo">
-        </div>
-        <div class="header-content">
-            <h1>Ammar M. Alshehri</h1>
-            <p>Cybersecurity Analyst at JIGPC | Transforming IT infrastructure with innovation and expertise.</p>
-            <a href="#about" class="cta-btn">Learn More</a>
-        </div>
-    </header>
-    <section id="about" class="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>I specialize in cybersecurity solutions, protecting organizational data, and designing robust IT infrastructures.</p>
-        </div>
+  <header>
+    <div class="container">
+      <nav>
+        <h1 class="logo">Cyber Security Expert</h1>
+        <ul class="nav-menu">
+          <li><a href="#digital-transformation">Digital Transformation</a></li>
+          <li><a href="#cyber-security">Cyber Security</a></li>
+          <li><a href="#insights">Insights</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Cyber <span>Security Expert</span></h1>
+        <p>Welcome to a new era in cyber security and digital transformation excellence.</p>
+        <a href="#contact" class="btn">Get Your Free Assessment</a>
+      </div>
     </section>
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2>Professional Skills</h2>
-            <div class="skill-set">
-                <div class="skill">Cybersecurity</div>
-                <div class="skill">Risk Assessment</div>
-                <div class="skill">Data Protection</div>
-                <div class="skill">Network Security</div>
-            </div>
+
+    <section id="digital-transformation" class="features">
+      <div class="container">
+        <h2>Digital Transformation</h2>
+        <div class="feature-grid">
+          <div class="feature-card">Modern Infrastructure</div>
+          <div class="feature-card">Business Continuity</div>
+          <div class="feature-card">Multi-Cloud</div>
+          <div class="feature-card">Hybrid IT</div>
         </div>
+      </div>
     </section>
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2>Work Experience</h2>
-            <div class="experience-item">
-                <h3>Cyber Security Analyst at JIGPC</h3>
-                <p>Leading innovative projects to enhance security measures and protect organizational data.</p>
-            </div>
-            <div class="experience-item">
-                <h3>IT Security Consultant</h3>
-                <p>Provided expert consultancy on IT security strategies and implementations for various corporations.</p>
-            </div>
+
+    <section id="cyber-security" class="features">
+      <div class="container">
+        <h2>Cyber Security</h2>
+        <div class="feature-grid">
+          <div class="feature-card">Risk and Compliance</div>
+          <div class="feature-card">Penetration Testing</div>
+          <div class="feature-card">Intelligent Security</div>
+          <div class="feature-card">Managed Security Solutions</div>
         </div>
+      </div>
     </section>
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Ammar M. Alshehri. All Rights Reserved.</p>
-        </div>
-    </footer>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Cyber Security Expert. All Rights Reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
