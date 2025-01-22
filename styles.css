@@ -116,5 +116,34 @@
     padding: 2rem;
     text-align: center;
     color: #586069;
+  }/* LinkedIn Section */
+.linkedin {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #1f2937, #0d1117);
+    color: #c9d1d9;
   }
+  
+  .linkedin-btn {
+    display: inline-flex;
+    align-items: center;
+    background: #0077b5;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background 0.3s ease;
+  }
+  
+  .linkedin-btn:hover {
+    background: #005983;
+  }
+  
+  .linkedin-logo {
+    width: 30px;
+    margin-right: 10px;
+  }
+  
   

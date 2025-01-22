@@ -1,8 +1,4 @@
-// Simple popup interaction
-document.querySelectorAll('.btn').forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      alert('Thank you for choosing CyberEz!');
-    });
+document.querySelector('.linkedin-btn').addEventListener('click', () => {
+    console.log('LinkedIn profile clicked!');
   });
   
