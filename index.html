@@ -20,8 +20,6 @@
             align-items: center;  
             padding: 20px;  
             background-color: #222;  
-            position: relative;  
-            z-index: 1;  
         }  
 
         .nav ul {  
@@ -53,7 +51,6 @@
             text-align: center;  
             position: relative;  
             color: #00ffcc;  
-            z-index: 1;  
         }  
 
         .banner h1 {  
@@ -62,12 +59,7 @@
             text-shadow: 0 0 10px rgba(0, 255, 204, 0.7);  
         }  
 
-        .banner p {  
-            font-size: 1.5rem;  
-            color: #ddd;  
-        }  
-
-        .discover-button {  
+        .banner button {  
             background-color: #ff007f;  
             color: #fff;  
             padding: 10px 20px;  
@@ -78,11 +70,11 @@
             transition: background-color 0.3s;  
         }  
 
-        .discover-button:hover {  
+        .banner button:hover {  
             background-color: #00ffcc;  
         }  
 
-        /* Features Section */  
+        /* Why Choose Us Section */  
         .features {  
             display: grid;  
             grid-template-columns: repeat(4, 1fr);  
@@ -112,6 +104,13 @@
             color: #bbb;  
         }  
 
+        /* Icons */  
+        .feature-item i {  
+            font-size: 40px;  
+            color: #ff007f;  
+            margin-bottom: 10px;  
+        }  
+
         /* Pushing Boundaries Section */  
         .pushing-boundaries {  
             padding: 40px;  
@@ -128,6 +127,7 @@
         .pushing-boundaries p {  
             color: #ddd;  
             margin: 20px 0;  
+            font-size: 1.2rem;  
         }  
 
         .learn-more-button {  
@@ -206,26 +206,28 @@
     <!-- Main Banner -->  
     <section class="banner" id="home">  
         <h1>Technology reimagined for a smarter future</h1>  
-        <p>Explore the possibilities</p>  
-        <button class="discover-button">Discover More</button>  
+        <button>Discover More</button>  
     </section>  
 
     <!-- Why Choose Us Section -->  
     <section class="features">  
-        <h2>Why Choose Us</h2>  
         <div class="feature-item">  
+            <i class="fab fa-figma"></i><!-- Figma icon -->  
             <h3>Well Organized</h3>  
             <p>Experience a clean, structured design for easy navigation.</p>  
         </div>  
         <div class="feature-item">  
+            <i class="fab fa-sketch"></i><!-- Sketch icon -->  
             <h3>Clean and Modern</h3>  
             <p>Our layouts are built with modern aesthetics in mind.</p>  
         </div>  
         <div class="feature-item">  
+            <i class="fab fa-adobe"></i><!-- Photoshop icon -->  
             <h3>Easy Customize</h3>  
             <p>Customize your design with ease using our flexible tools.</p>  
         </div>  
         <div class="feature-item">  
+            <i class="fab fa-xd"></i><!-- Adobe XD icon -->  
             <h3>Used Free Fonts</h3>  
             <p>Typography that is both professional and free to use.</p>  
         </div>  
@@ -247,7 +249,7 @@
             <li>Blockchain technology for secure transactions.</li>  
         </ul>  
     </section>  
-
+    
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Icon library -->  
 </body>  
 </html>
