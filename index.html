@@ -3,231 +3,53 @@
 <head>  
     <meta charset="UTF-8">  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>Cyber - Futuristic Tech Website</title>  
+    <title>Cyber Futuristic Tech Website</title>  
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">  
-    <style>  
-        body {  
-            margin: 0;  
-            font-family: 'Roboto', sans-serif;  
-            background-color: #0c0c0c;  
-            color: #fff;  
-        }  
-
-        /* Header */  
-        .header {  
-            display: flex;  
-            justify-content: space-between;  
-            align-items: center;  
-            padding: 20px;  
-            background-color: #222;  
-        }  
-
-        .nav ul {  
-            list-style: none;  
-            display: flex;  
-            gap: 20px;  
-            margin: 0;  
-            padding: 0;  
-        }  
-
-        .nav a {  
-            text-decoration: none;  
-            color: #00ffcc;  
-            transition: color 0.3s;  
-        }  
-
-        .nav a:hover {  
-            color: #ff007f;  
-        }  
-
-        /* Main Banner */  
-        .banner {  
-            background: url('https://example.com/your-image.jpg') no-repeat center center/cover; /* Replace with a suitable image */  
-            height: 60vh;  
-            display: flex;  
-            flex-direction: column;  
-            justify-content: center;  
-            align-items: center;  
-            text-align: center;  
-            position: relative;  
-            color: #00ffcc;  
-        }  
-
-        .banner h1 {  
-            font-size: 4rem;  
-            margin: 0;  
-            text-shadow: 0 0 10px rgba(0, 255, 204, 0.7);  
-        }  
-
-        .banner button {  
-            background-color: #ff007f;  
-            color: #fff;  
-            padding: 10px 20px;  
-            border: none;  
-            border-radius: 5px;  
-            cursor: pointer;  
-            font-size: 1.2rem;  
-            transition: background-color 0.3s;  
-        }  
-
-        .banner button:hover {  
-            background-color: #00ffcc;  
-        }  
-
-        /* Why Choose Us Section */  
-        .features {  
-            display: grid;  
-            grid-template-columns: repeat(4, 1fr);  
-            gap: 20px;  
-            padding: 40px 20px;  
-            background-color: #1a1a1a;  
-        }  
-
-        .feature-item {  
-            background: #333;  
-            border-radius: 10px;  
-            padding: 30px;  
-            text-align: center;  
-            transition: transform 0.3s;  
-        }  
-
-        .feature-item:hover {  
-            transform: scale(1.05);  
-        }  
-
-        .feature-item h3 {  
-            margin: 10px 0;  
-            color: #00ffcc;  
-        }  
-
-        .feature-item p {  
-            color: #bbb;  
-        }  
-
-        /* Icons */  
-        .feature-item i {  
-            font-size: 40px;  
-            color: #ff007f;  
-            margin-bottom: 10px;  
-        }  
-
-        /* Pushing Boundaries Section */  
-        .pushing-boundaries {  
-            padding: 40px;  
-            background-color: #222;  
-            text-align: center;  
-        }  
-
-        .pushing-boundaries h2 {  
-            color: #ff007f;  
-            margin-bottom: 10px;  
-            font-size: 2.5rem;  
-        }  
-
-        .pushing-boundaries p {  
-            color: #ddd;  
-            margin: 20px 0;  
-            font-size: 1.2rem;  
-        }  
-
-        .learn-more-button {  
-            background-color: #ff007f;  
-            color: #fff;  
-            padding: 10px 20px;  
-            border: none;  
-            border-radius: 5px;  
-            cursor: pointer;  
-            font-size: 1.2rem;  
-            transition: background-color 0.3s;  
-        }  
-
-        .learn-more-button:hover {  
-            background-color: #00ffcc;  
-        }  
-
-        /* Bottom Section */  
-        .technology-future {  
-            padding: 40px;  
-            background-color: #1a1a1a;  
-            text-align: center;  
-        }  
-
-        .technology-future h2 {  
-            color: #00ffcc;  
-            font-size: 2rem;  
-        }  
-
-        .technology-future ul {  
-            list-style: none;  
-            padding: 0;  
-            color: #bbb;  
-            font-size: 1.2rem;  
-            margin-top: 20px;  
-        }  
-
-        .technology-future li {  
-            margin: 10px 0;  
-        }  
-
-        /* Responsive Design */  
-        @media (max-width: 768px) {  
-            .features {  
-                grid-template-columns: 1fr;  
-            }  
-
-            .banner h1 {  
-                font-size: 2.5rem;  
-            }  
-
-            .banner p {  
-                font-size: 1rem;  
-            }  
-        }  
-    </style>  
+    <link rel="stylesheet" href="styles.css">  
 </head>  
 <body>  
 
-    <!-- Header -->  
+    <!-- Header Section -->  
     <header class="header">  
-        <div class="logo">Cyber.</div>  
-        <nav class="nav">  
+        <nav class="navigation">  
             <ul>  
-                <li><a href="#home">Home</a></li>  
-                <li><a href="#about">About</a></li>  
-                <li><a href="#services">Services</a></li>  
-                <li><a href="#terms">Terms & Conditions</a></li>  
-                <li><a href="#help">Help</a></li>  
-                <li><a href="#login">Login</a></li>  
-                <li><a href="#signup">Signup</a></li>  
+                <li><a href="#">Home</a></li>  
+                <li><a href="#">About</a></li>  
+                <li><a href="#">Services</a></li>  
+                <li><a href="#">Terms & Conditions</a></li>  
+                <li><a href="#">Help</a></li>  
+                <li><a href="#">Login</a></li>  
+                <li><a href="#">Signup</a></li>  
             </ul>  
         </nav>  
     </header>  
 
-    <!-- Main Banner -->  
-    <section class="banner" id="home">  
+    <!-- Main Banner Section -->  
+    <section class="main-banner">  
         <h1>Technology reimagined for a smarter future</h1>  
-        <button>Discover More</button>  
+        <button class="discover-button">Discover More</button>  
     </section>  
 
     <!-- Why Choose Us Section -->  
     <section class="features">  
+        <h2>Why Choose Us</h2>  
         <div class="feature-item">  
-            <i class="fab fa-figma"></i><!-- Figma icon -->  
+            <img src="icons/figma.svg" alt="Figma Icon">  
             <h3>Well Organized</h3>  
             <p>Experience a clean, structured design for easy navigation.</p>  
         </div>  
         <div class="feature-item">  
-            <i class="fab fa-sketch"></i><!-- Sketch icon -->  
+            <img src="icons/sketch.svg" alt="Sketch Icon">  
             <h3>Clean and Modern</h3>  
             <p>Our layouts are built with modern aesthetics in mind.</p>  
         </div>  
         <div class="feature-item">  
-            <i class="fab fa-adobe"></i><!-- Photoshop icon -->  
+            <img src="icons/photoshop.svg" alt="Photoshop Icon">  
             <h3>Easy Customize</h3>  
             <p>Customize your design with ease using our flexible tools.</p>  
         </div>  
         <div class="feature-item">  
-            <i class="fab fa-xd"></i><!-- Adobe XD icon -->  
+            <img src="icons/adobe-xd.svg" alt="Adobe XD Icon">  
             <h3>Used Free Fonts</h3>  
             <p>Typography that is both professional and free to use.</p>  
         </div>  
@@ -241,15 +63,14 @@
     </section>  
 
     <!-- Bottom Section -->  
-    <section class="technology-future">  
+    <footer class="bottom-section">  
         <h2>Discover the technology shaping the future</h2>  
         <ul>  
-            <li>Integration of AI in everyday life.</li>  
-            <li>Enhanced virtual reality experiences.</li>  
-            <li>Blockchain technology for secure transactions.</li>  
+            <li>1. Immersive Virtual Reality Experiences</li>  
+            <li>2. Artificial Intelligence in Daily Life</li>  
+            <li>3. Advanced Robotics and Automation</li>  
         </ul>  
-    </section>  
-    
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Icon library -->  
+    </footer>  
+
 </body>  
 </html>
