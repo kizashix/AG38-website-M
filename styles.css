@@ -1,40 +1,86 @@
-/* Global styles */
+/* Basic Styling - Customize as needed */
 body {
-  background-color: #111;
-  color: #fff;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Open Sans', sans-serif; 
+  background-color: #121212; 
+  color: #ffffff; 
+  margin: 0;
 }
 
-/* Header styles */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 header {
-  /* ... */
+  background-color: #121212; 
+  padding: 20px 0; 
 }
 
-/* Hero section styles */
+.logo img {
+  height: 40px; 
+}
+
+.contact-info {
+  text-align: right; 
+  font-size: 0.9em;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center; 
+}
+
+nav li {
+  display: inline-block; 
+  margin: 0 10px; 
+}
+
+.contact-btn {
+  background-color: #f7931e; 
+  color: #ffffff; 
+  padding: 8px 16px;
+  border-radius: 5px; 
+}
+
 #hero {
-  /* ... */
-  background-image: url('path/to/your/background-image.jpg');
-  /* ... */
+  text-align: center;
+  padding: 100px 0; 
 }
 
-/* Why Choose Us section styles */
-#why-choose-us {
-  /* ... */
+#hero h1 {
+  font-size: 3em; 
+  margin-bottom: 20px; 
 }
 
-/* Pushing Boundaries section styles */
-#pushing-boundaries {
-  /* ... */
-  background-color: #222;
-  /* ... */
+.cta-buttons {
+  margin-top: 40px; 
 }
 
-/* Discover Technology section styles */
-#discover-technology {
-  /* ... */
+.btn {
+  display: inline-block;
+  background-color: transparent; 
+  color: #ffffff; 
+  border: 2px solid #f7931e; 
+  padding: 12px 24px;
+  margin: 0 10px; 
+  text-decoration: none; 
+  border-radius: 5px; 
 }
 
-/* Footer styles */
+.graphic {
+  /*  Replace with your SVG or image */
+  width: 300px; 
+  height: 300px;
+  margin: 50px auto;
+  background-color: #f7931e; 
+}
+
 footer {
-  /* ... */
+  background-color: #181818; 
+  padding: 20px 0;
+  text-align: center; 
+  font-size: 0.8em; 
 }
