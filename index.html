@@ -6,7 +6,6 @@
     <title>Site Under Maintenance</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
-        /* General Body Styling */
         body {
             margin: 0;
             padding: 0;
@@ -20,7 +19,6 @@
             text-align: center;
         }
 
-        /* Container */
         .container {
             width: 90%;
             max-width: 600px;
@@ -28,6 +26,28 @@
             padding: 40px;
             border-radius: 15px;
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        /* Logo Styling */
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            width: 60px;
+            height: 60px;
+            margin-right: 10px;
+        }
+
+        .logo h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0;
+            color: #fff;
         }
 
         h1 {
@@ -40,7 +60,6 @@
             margin-bottom: 30px;
         }
 
-        /* Timer */
         .timer {
             display: flex;
             justify-content: space-around;
@@ -57,7 +76,6 @@
             font-weight: 700;
         }
 
-        /* Email Form */
         .email-form {
             margin: 20px 0;
         }
@@ -98,6 +116,12 @@
 </head>
 <body>
     <div class="container">
+        <!-- Logo Section -->
+        <div class="logo">
+            <img src="logo.png" alt="AMS Logo">
+            <h2>AMS</h2>
+        </div>
+
         <h1>Site Under Maintenance</h1>
         <p>We're working hard to improve our website. Please check back soon!</p>
 
