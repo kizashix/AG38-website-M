@@ -41,7 +41,7 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #00d4ff, #302b63);
+  background: linear-gradient(135deg, #ff00c8, #0048ff);
   color: white;
   text-align: center;
   padding: 5rem 2rem;
@@ -69,27 +69,6 @@ nav a:hover {
 
 .hero .btn:hover {
   background: #1e40af;
-}
-
-.progress-bar {
-  display: inline-block;
-  margin-bottom: 2rem;
-}
-
-.circle {
-  width: 150px;
-  height: 150px;
-  background: #1e40af;
-  border-radius: 50%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.percentage {
-  font-size: 2rem;
-  color: #fff;
 }
 
 /* Services Section */
@@ -134,7 +113,37 @@ nav a:hover {
   margin-bottom: 1rem;
 }
 
-.about .btn {
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.stat-item {
+  background: #2d3a47;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 150px;
+}
+
+.stat-item h3 {
+  font-size: 2rem;
+  color: #00d4ff;
+}
+
+.stat-item p {
+  font-size: 1rem;
+  color: #fff;
+}
+
+/* Contact Section */
+.contact {
+  padding: 3rem 1rem;
+  text-align: center;
+  background: #1f2937;
+}
+
+.contact .btn {
   background: #00d4ff;
   color: white;
   padding: 0.8rem 2rem;
@@ -144,7 +153,7 @@ nav a:hover {
   transition: background 0.3s ease;
 }
 
-.about .btn:hover {
+.contact .btn:hover {
   background: #1e40af;
 }
 
