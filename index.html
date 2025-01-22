@@ -1,56 +1,150 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fortuna Cysec</title>
-    <link rel="stylesheet" href="style.css"> 
-</head>
-<body>
+import React from 'react';
+import { 
+  Layout, 
+  Code, 
+  Layers, 
+  Paintbrush, 
+  Type 
+} from 'lucide-react';
 
-    <header>
-        <div class="container">
-            <a href="#" class="logo">
-                <img src="logo.svg" alt="Fortuna Cysec Logo"> 
-            </a>
-            <div class="contact-info">
-                <p>Experiencing a Breach? Call +1-833-33-CYSEC (+1-833-33-29732)</p>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">TheFense</a></li>
-                    <li><a href="#">Resources</a></li>
-                    <li><a href="#">Company</a></li>
-                    <li><a href="#" class="contact-btn">Contact Us</a></li>
-                </ul>
-            </nav>
+const CyberTechWebsite = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-purple-900 to-black text-white">
+      {/* Navigation */}
+      <nav className="flex justify-between items-center p-6 border-b border-purple-800">
+        <div className="text-2xl font-bold">Cyber.</div>
+        <div className="flex space-x-6">
+          <a href="#" className="hover:text-pink-500 transition-colors">Home</a>
+          <a href="#" className="hover:text-pink-500 transition-colors">About</a>
+          <a href="#" className="hover:text-pink-500 transition-colors">Services</a>
+          <a href="#" className="hover:text-pink-500 transition-colors">Terms & Condition</a>
+          <a href="#" className="hover:text-pink-500 transition-colors">Help</a>
         </div>
-    </header>
-
-    <main>
-        <section id="hero">
-            <div class="container">
-                <h1>Make cybersecurity a part of your enterprise's DNA</h1>
-                <p>Fortify your cybersecurity posture with our integrated, but modular managed services platform.</p>
-                <div class="cta-buttons">
-                    <a href="#" class="btn">HOW WE DO IT →</a>
-                    <a href="#" class="btn">Talk To An Expert →</a>
-                </div>
-                <div class="graphic">
-                    </div> 
-            </div>
-        </section>
-
-        </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 Fortuna Cysec. All rights reserved.</p>
+        <div className="flex space-x-4">
+          <button className="px-4 py-2 rounded hover:text-pink-500 transition-colors">LOGIN</button>
+          <button className="px-4 py-2 bg-pink-600 rounded hover:bg-pink-700 transition-colors">SIGNUP</button>
         </div>
-    </footer>
+      </nav>
 
-    <script src="script.js"></script> 
-</body>
-</html>
+      {/* Hero Section */}
+      <div className="relative py-24 px-12">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-6xl font-bold mb-8">
+            Technology reimagined
+            <br />
+            for a smarter future
+          </h1>
+          <button className="px-8 py-3 bg-pink-600 rounded-full hover:bg-pink-700 transition-colors">
+            Discover More
+          </button>
+        </div>
+        <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+      </div>
+
+      {/* Features Section */}
+      <div className="py-24 px-12 bg-black/50">
+        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+          <FeatureCard 
+            icon={<Layout className="w-8 h-8 text-pink-500" />}
+            title="Well Organized"
+            description="Experience a clean, structured design for easy navigation."
+          />
+          <FeatureCard 
+            icon={<Layers className="w-8 h-8 text-pink-500" />}
+            title="Clean and Modern"
+            description="Our layouts are built with modern aesthetics in mind."
+          />
+          <FeatureCard 
+            icon={<Paintbrush className="w-8 h-8 text-pink-500" />}
+            title="Easy Customize"
+            description="Customize your design with ease using our flexible tools."
+          />
+          <FeatureCard 
+            icon={<Type className="w-8 h-8 text-pink-500" />}
+            title="Used Free Fonts"
+            description="Typography that is both professional and free to use."
+          />
+        </div>
+      </div>
+
+      {/* Pushing Boundaries Section */}
+      <div className="py-24 px-12 relative">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-6">
+            Pushing boundaries,
+            <br />
+            redefining
+          </h2>
+          <p className="mb-8 text-gray-300">
+            Step into the future with cutting-edge technology that reshapes 
+            the way we work, live, and innovate.
+          </p>
+          <button className="px-8 py-3 bg-pink-600 rounded-full hover:bg-pink-700 transition-colors">
+            Learn More
+          </button>
+        </div>
+      </div>
+
+      {/* Stats Section */}
+      <div className="py-12 px-12 bg-black/50">
+        <div className="max-w-6xl mx-auto grid grid-cols-3 gap-8 text-center">
+          <div>
+            <div className="text-4xl font-bold text-pink-500">50.2k</div>
+            <div className="text-gray-400">Future</div>
+          </div>
+          <div>
+            <div className="text-4xl font-bold text-pink-500">751.4+</div>
+            <div className="text-gray-400">Smart Solutions</div>
+          </div>
+          <div>
+            <div className="text-4xl font-bold text-pink-500">24.00K+</div>
+            <div className="text-gray-400">Our Clients</div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Section */}
+      <div className="py-24 px-12">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl font-bold mb-12 text-center">
+            Discover the technology shaping the future
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="p-6 bg-purple-900/30 rounded-lg">
+              <h3 className="text-xl font-bold mb-4">Virtual Reality</h3>
+              <p className="text-gray-300">
+                Immerse yourself in new digital worlds with cutting-edge VR technology.
+              </p>
+            </div>
+            <div className="p-6 bg-purple-900/30 rounded-lg">
+              <h3 className="text-xl font-bold mb-4">Artificial Intelligence</h3>
+              <p className="text-gray-300">
+                Experience smart solutions powered by advanced AI algorithms.
+              </p>
+            </div>
+            <div className="p-6 bg-purple-900/30 rounded-lg">
+              <h3 className="text-xl font-bold mb-4">Augmented Reality</h3>
+              <p className="text-gray-300">
+                Bridge the digital and physical worlds with AR innovations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const FeatureCard = ({ icon, title, description }) => {
+  return (
+    <div className="p-6 bg-purple-900/30 rounded-lg hover:bg-purple-900/50 transition-colors">
+      <div className="mb-4">
+        {icon}
+      </div>
+      <h3 className="text-xl font-bold mb-2">{title}</h3>
+      <p className="text-gray-300">{description}</p>
+    </div>
+  );
+};
+
+export default CyberTechWebsite;
