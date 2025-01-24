@@ -1,9 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Matrix Design - Experience the future of digital reality with AI, quantum computing, and cybersecurity.">
     <title>Matrix Design</title>
     <style>
         :root {
@@ -171,6 +169,55 @@
             box-shadow: 0 0 30px var(--neon-green);
         }
 
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            padding: 2rem;
+            border: 1px solid var(--neon-green);
+            transition: transform 0.3s;
+            animation: pulse 2s infinite;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .edgy-section {
+            clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+            background: rgba(255,255,255,0.05);
+            margin: 4rem 2rem;
+            padding: 4rem 2rem;
+            border: 1px solid var(--neon-purple);
+            text-align: center;
+        }
+
+        .round-section {
+            border-radius: 30px;
+            background: rgba(255,255,255,0.05);
+            margin: 4rem 2rem;
+            padding: 2rem;
+            border: 1px solid var(--neon-green);
+            text-align: center;
+        }
+
+        #matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.5rem;
@@ -179,29 +226,96 @@
     </style>
 </head>
 <body>
-    <canvas id="matrix-bg" aria-hidden="true"></canvas>
-
-    <nav>
-        <div class="nav-container">
+    <canvas id="matrix-bg" width="1365" height="911"></canvas>
+    
+    ```html
+<nav>
+    <div class="nav-container">
+        <div class="nav-items">
             <div class="logo">MATRIX</div>
-            <button class="menu-btn" aria-label="Toggle Menu">☰</button>
-        </div>
-    </nav>
-
-    <div class="sidebar" aria-label="Sidebar Menu">
-        <div class="sidebar-links">
-            <a href="#" class="sidebar-link" aria-label="Navigate to Home">Home</a>
-            <a href="#" class="sidebar-link" aria-label="Navigate to About">About</a>
-            <a href="#" class="sidebar-link" aria-label="Navigate to Services">Services</a>
-            <a href="#" class="sidebar-link" aria-label="Navigate to Contact">Contact</a>
+            <div class="menu-links">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </div>
+            
         </div>
     </div>
+</nav>
+
+<style>
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.menu-links {
+    display: flex;
+    gap: 2rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu-links a {
+    color: var(--neon-green);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s;
+    text-shadow: 0 0 10px var(--neon-green);
+}
+
+.menu-links a:hover {
+    background: rgba(0, 255, 76, 0.1);
+    box-shadow: 0 0 15px var(--glow);
+}
+
+@media (max-width: 768px) {
+    .menu-links {
+        display: none;
+    }
+}
+</style>
 
     <div class="content">
         <section class="hero">
             <h1>Enter The Matrix</h1>
             <p>Experience the future of digital reality</p>
-            <button class="button" aria-label="Connect Now">Connect Now</button>
+            <button class="button">Connect Now</button>
+        </section>
+
+        <div class="grid">
+            <div class="card">
+                <h2>Neural Networks</h2>
+                <p>Advanced AI systems</p>
+            </div>
+            <div class="card">
+                <h2>Quantum Computing</h2>
+                <p>Next-gen processing</p>
+            </div>
+            <div class="card">
+                <h2>Cybersecurity</h2>
+                <p>Encrypted protection</p>
+            </div>
+        </div>
+
+        <section class="edgy-section">
+            <h2>Join The Revolution</h2>
+            <p>Be part of the next generation</p>
+        </section>
+
+        <section class="round-section">
+            <h2>Explore More</h2>
+            <p>Discover the future of technology</p>
         </section>
     </div>
 
@@ -213,7 +327,7 @@
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
 
-        const chars = '01アイ';
+        const chars = '01アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
         const fontSize = 14;
         const columns = Math.floor(canvas.width / fontSize);
         const drops = new Array(columns).fill(1);
@@ -221,19 +335,23 @@
         function draw() {
             ctx.fillStyle = 'rgba(10, 11, 26, 0.05)';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
-            ctx.font = `${fontSize}px monospace`;
 
-            drops.forEach((drop, index) => {
+            ctx.font = fontSize + 'px monospace';
+
+            for(let i = 0; i < drops.length; i++) {
                 const text = chars[Math.floor(Math.random() * chars.length)];
-                const color = index % 2 === 0 ? '#00ff4c' : '#b829ff';
-                ctx.fillStyle = color;
-                ctx.fillText(text, index * fontSize, drop * fontSize);
-                if (drop * fontSize > canvas.height && Math.random() > 0.975) {
-                    drops[index] = 0;
+                const isAlternate = i % 2 === 0;
+                
+                ctx.fillStyle = isAlternate ? '#00ff4c' : '#b829ff';
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                if(drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
                 }
-                drops[index]++;
-            });
+                drops[i]++;
+            }
         }
+
         setInterval(draw, 33);
 
         window.addEventListener('resize', () => {
@@ -249,17 +367,12 @@
             sidebar.classList.toggle('active');
         });
 
-        sidebar.addEventListener('click', (e) => {
-            if (e.target.classList.contains('sidebar-link')) {
-                sidebar.classList.remove('active');
-            }
-        });
-
         document.addEventListener('click', (e) => {
             if (!sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
                 sidebar.classList.remove('active');
             }
         });
     </script>
-</body>
-</html>
+
+
+</body></html>
