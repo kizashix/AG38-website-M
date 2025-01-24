@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Share Tech Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/sharetechmono/v15/J7aHnp1uDWRBEqV98dVQztYldFcLowEF.woff2') format('woff2');
+}
+
+:root {
+  --matrix-green: #00FF00;
+  --matrix-dark-green: #003B00;
+  --matrix-blue: #0066FF;
+  --matrix-black: #000000;
+}
+
+body {
+  background-color: var(--matrix-black);
+  color: var(--matrix-green);
+  font-family: 'Share Tech Mono', monospace;
+}
+
+/* Digital Rain Animation */
+.digital-rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.digital-rain span {
+  position: absolute;
+  width: 20px;
+  font-size: 1.2rem;
+  color: var(--matrix-green);
+  text-shadow: 0 0 10px var(--matrix-green);
+  animation: rain linear infinite;
+  opacity: 0;
+}
+
+@keyframes rain {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+/* Grid Background */
+.grid-bg {
+  background-image: linear-gradient(var(--matrix-dark-green) 1px, transparent 1px),
+    linear-gradient(90deg, var(--matrix-dark-green) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: center center;
+}
+
+/* Glowing Text Effect */
+.glow {
+  text-shadow: 0 0 10px var(--matrix-green),
+               0 0 20px var(--matrix-green),
+               0 0 30px var(--matrix-green);
+}
+
+.glow-blue {
+  text-shadow: 0 0 10px var(--matrix-blue),
+               0 0 20px var(--matrix-blue),
+               0 0 30px var(--matrix-blue);
+}
+
+/* Glitch Effect */
+.glitch {
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.glitch:hover {
+  transform: scale(1.05);
+}
+
+.glitch:hover::before {
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  text-shadow: -2px 0 var(--matrix-blue);
+  top: 0;
+  color: var(--matrix-green);
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: glitch-anim 2s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+  0% {
+    clip: rect(44px, 9999px, 56px, 0);
+  }
+  100% {
+    clip: rect(32px, 9999px, 64px, 0);
+  }
+}
+
+/* Loading Animation */
+.loading::after {
+  content: '';
+  animation: loading 1s infinite;
+}
+
+@keyframes loading {
+  0% { content: ''; }
+  25% { content: '.'; }
+  50% { content: '..'; }
+  75% { content: '...'; }
+  100% { content: ''; }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--matrix-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--matrix-dark-green);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--matrix-green);
+}
