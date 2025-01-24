@@ -2,377 +2,380 @@
 <html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matrix Design</title>
+    <meta name="description" content="Ammar Alshehri - Cyber Security Analyst Portfolio">
+    <meta name="keywords" content="cybersecurity, IT security, portfolio, professional">
+    <meta name="author" content="Ammar Alshehri">
+    <title>Ammar Alshehri | Cyber Security Analyst</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&amp;display=swap" rel="stylesheet">
     <style>
         :root {
-            --neon-green: #00ff4c;
-            --neon-purple: #b829ff;
-            --dark: #0a0b1a;
-            --glow: #00ff4c44;
-        }
-
-        @keyframes pulse {
-            0% { box-shadow: 0 0 5px var(--neon-green), 0 0 10px var(--neon-green); }
-            50% { box-shadow: 0 0 20px var(--neon-green), 0 0 30px var(--neon-green); }
-            100% { box-shadow: 0 0 5px var(--neon-green), 0 0 10px var(--neon-green); }
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
-
-        @keyframes glitch {
-            2%, 64% { transform: translate(2px,0) skew(0deg); }
-            4%, 60% { transform: translate(-2px,0) skew(0deg); }
-            62% { transform: translate(0,0) skew(5deg); }
+            --matrix-green: #00FF00;
+            --matrix-dark-green: #003B00;
+            --matrix-blue: #0066FF;
+            --matrix-black: #000000;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: system-ui, -apple-system, sans-serif;
         }
 
         body {
-            background: var(--dark);
-            color: white;
-            overflow-x: hidden;
+            font-family: 'Share Tech Mono', monospace;
+            background-color: var(--matrix-black);
+            color: var(--matrix-green);
+            line-height: 1.6;
         }
 
-        nav {
-            position: fixed;
-            width: 100%;
-            padding: 1rem;
-            background: rgba(10,11,26,0.95);
-            backdrop-filter: blur(10px);
-            z-index: 100;
-            border-bottom: 1px solid var(--neon-green);
-            animation: pulse 2s infinite;
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-        }
-
-        .menu-btn {
-            background: none;
-            border: none;
-            color: var(--neon-green);
-            font-size: 24px;
-            cursor: pointer;
-            text-shadow: 0 0 10px var(--neon-green);
-            z-index: 1000;
-        }
-
-        .sidebar {
-            position: fixed;
-            top: 0;
-            right: -300px;
-            width: 300px;
-            height: 100vh;
-            background: rgba(10,11,26,0.95);
-            backdrop-filter: blur(10px);
-            transition: 0.3s;
-            z-index: 99;
-            border-left: 1px solid var(--neon-green);
-            padding-top: 80px;
-        }
-
-        .sidebar.active {
-            right: 0;
-            box-shadow: -5px 0 20px var(--glow);
-        }
-
-        .sidebar-links {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            padding: 2rem;
-        }
-
-        .sidebar-link {
-            color: white;
-            text-decoration: none;
-            padding: 1rem;
-            border-radius: 10px;
-            transition: 0.3s;
-            border: 1px solid transparent;
-        }
-
-        .sidebar-link:hover {
-            border-color: var(--neon-green);
-            box-shadow: 0 0 15px var(--glow);
-            transform: translateX(-5px);
-        }
-
-        .logo {
-            font-size: 2rem;
-            font-weight: bold;
-            color: var(--neon-green);
-            text-shadow: 0 0 15px var(--neon-green);
-            animation: glitch 1s infinite;
-        }
-
-        .content {
-            padding-top: 80px;
-        }
-
-        .hero {
-            min-height: 90vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 2rem;
-            position: relative;
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            color: var(--neon-green);
-            text-shadow: 0 0 20px var(--neon-green);
-            margin-bottom: 2rem;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            color: rgba(255,255,255,0.8);
-            max-width: 600px;
-            margin-bottom: 2rem;
-        }
-
-        .button {
-            background: var(--neon-green);
-            color: var(--dark);
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 50px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            animation: pulse 2s infinite;
-        }
-
-        .button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 0 30px var(--neon-green);
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            padding: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .card {
-            background: rgba(255,255,255,0.05);
-            border-radius: 20px;
-            padding: 2rem;
-            border: 1px solid var(--neon-green);
-            transition: transform 0.3s;
-            animation: pulse 2s infinite;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-        }
-
-        .edgy-section {
-            clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
-            background: rgba(255,255,255,0.05);
-            margin: 4rem 2rem;
-            padding: 4rem 2rem;
-            border: 1px solid var(--neon-purple);
-            text-align: center;
-        }
-
-        .round-section {
-            border-radius: 30px;
-            background: rgba(255,255,255,0.05);
-            margin: 4rem 2rem;
-            padding: 2rem;
-            border: 1px solid var(--neon-green);
-            text-align: center;
-        }
-
-        #matrix-bg {
+        /* Digital Rain Animation */
+        .digital-rain {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1;
+            pointer-events: none;
+            z-index: 0;
         }
 
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--matrix-dark-green);
+            z-index: 100;
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--matrix-green);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--matrix-green);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--matrix-blue);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 2rem 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        section {
+            margin-bottom: 4rem;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--matrix-dark-green);
+            border-radius: 4px;
+        }
+
+        h1, h2 {
+            color: var(--matrix-green);
+            margin-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2rem;
+            border-bottom: 1px solid var(--matrix-dark-green);
+            padding-bottom: 0.5rem;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        .hero h1 {
+            animation: glitch 2s infinite;
+        }
+
+        .subtitle {
+            color: var(--matrix-blue);
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Experience Cards */
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .experience-card {
+            padding: 1.5rem;
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid var(--matrix-dark-green);
+            transition: border-color 0.3s ease;
+        }
+
+        .experience-card:hover {
+            border-color: var(--matrix-green);
+        }
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--matrix-green);
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid var(--matrix-dark-green);
+            color: var(--matrix-green);
+            font-family: 'Share Tech Mono', monospace;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--matrix-green);
+        }
+
+        button {
+            padding: 0.8rem 2rem;
+            background: var(--matrix-dark-green);
+            border: 1px solid var(--matrix-green);
+            color: var(--matrix-green);
+            font-family: 'Share Tech Mono', monospace;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background: var(--matrix-green);
+            color: var(--matrix-black);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.8);
+            border-top: 1px solid var(--matrix-dark-green);
+        }
+
+        /* Animations */
+        @keyframes glitch {
+            0% {
+                text-shadow: none;
+            }
+            20% {
+                text-shadow: 0 0 10px var(--matrix-green),
+                           2px 2px 10px var(--matrix-blue);
+            }
+            21% {
+                text-shadow: none;
+            }
+            100% {
+                text-shadow: none;
+            }
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1.2rem;
             }
         }
     </style>
 </head>
 <body>
-    <canvas id="matrix-bg" width="1365" height="911"></canvas>
+    <div class="digital-rain" id="digitalRain"><canvas width="1111" height="1111"></canvas></div>
     
-   
-<nav>
-    <div class="nav-container">
-        <div class="nav-items">
-            <div class="logo">MATRIX</div>
-            <div class="menu-links">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Services</a>
-                <a href="#">Contact</a>
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">AMMAR_ALSHEHRI</a>
+            <div class="nav-links">
+                <a href="#about">ABOUT</a>
+                <a href="#experience">EXPERIENCE</a>
+                <a href="#contact">CONTACT</a>
             </div>
-            
         </div>
-    </div>
-</nav>
+    </nav>
 
-<style>
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.nav-items {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2rem;
-}
-
-.menu-links {
-    display: flex;
-    gap: 2rem;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.menu-links a {
-    color: var(--neon-green);
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    transition: all 0.3s;
-    text-shadow: 0 0 10px var(--neon-green);
-}
-
-.menu-links a:hover {
-    background: rgba(0, 255, 76, 0.1);
-    box-shadow: 0 0 15px var(--glow);
-}
-
-@media (max-width: 768px) {
-    .menu-links {
-        display: none;
-    }
-}
-</style>
-
-    <div class="content">
+    <div class="container">
         <section class="hero">
-            <h1>Enter The Matrix</h1>
-            <p>Experience the future of digital reality</p>
-            <button class="button">Connect Now</button>
+            <h1>AMMAR ALSHEHRI</h1>
+            <div class="subtitle">CYBER_SECURITY_ANALYST.exe</div>
+            <p>INITIALIZING SECURE PROTOCOLS...</p>
         </section>
 
-        <div class="grid">
-            <div class="card">
-                <h2>Neural Networks</h2>
-                <p>Advanced AI systems</p>
-            </div>
-            <div class="card">
-                <h2>Quantum Computing</h2>
-                <p>Next-gen processing</p>
-            </div>
-            <div class="card">
-                <h2>Cybersecurity</h2>
-                <p>Encrypted protection</p>
-            </div>
-        </div>
-
-        <section class="edgy-section">
-            <h2>Join The Revolution</h2>
-            <p>Be part of the next generation</p>
+        <section id="about">
+            <h2>SYSTEM_INFO</h2>
+            <p>As a visionary in cybersecurity and IT systems administration, I bring over five years of transformative experience merging technical mastery with strategic foresight. Specialized in:</p>
+            <ul>
+                <li>Advanced Security Solutions Implementation</li>
+                <li>Risk Assessment and Mitigation</li>
+                <li>Data Loss Prevention (DLP)</li>
+                <li>Infrastructure Security</li>
+                <li>Compliance Management</li>
+            </ul>
         </section>
 
-        <section class="round-section">
-            <h2>Explore More</h2>
-            <p>Discover the future of technology</p>
+        <section id="experience">
+            <h2>SYSTEM_LOGS</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <h3>Cyber Security Analyst</h3>
+                    <p>JIGPC</p>
+                    <p>2024 - Present</p>
+                </div>
+                <div class="experience-card">
+                    <h3>IT System Administrator</h3>
+                    <p>Jazan Gas Projects Company</p>
+                    <p>2016 - 2020</p>
+                </div>
+                <div class="experience-card">
+                    <h3>IT Systems Administrator</h3>
+                    <p>ESGSA</p>
+                    <p>2016</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>ESTABLISH_CONNECTION</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">IDENTIFIER:</label>
+                    <input type="text" id="name" name="name" required="">
+                </div>
+                <div class="form-group">
+                    <label for="email">COMM_CHANNEL:</label>
+                    <input type="email" id="email" name="email" required="">
+                </div>
+                <div class="form-group">
+                    <label for="message">TRANSMISSION:</label>
+                    <textarea id="message" name="message" rows="5" required=""></textarea>
+                </div>
+                <button type="submit">TRANSMIT_MESSAGE</button>
+            </form>
         </section>
     </div>
+
+    <footer>
+        <p>© 2024 AMMAR_ALSHEHRI | ALL_RIGHTS_SECURED</p>
+    </footer>
 
     <script>
-        // Matrix Background Effect
-        const canvas = document.getElementById('matrix-bg');
-        const ctx = canvas.getContext('2d');
-
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-
-        const chars = '01アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
-        const fontSize = 14;
-        const columns = Math.floor(canvas.width / fontSize);
-        const drops = new Array(columns).fill(1);
-
-        function draw() {
-            ctx.fillStyle = 'rgba(10, 11, 26, 0.05)';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-            ctx.font = fontSize + 'px monospace';
-
-            for(let i = 0; i < drops.length; i++) {
-                const text = chars[Math.floor(Math.random() * chars.length)];
-                const isAlternate = i % 2 === 0;
-                
-                ctx.fillStyle = isAlternate ? '#00ff4c' : '#b829ff';
-                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-                if(drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-                    drops[i] = 0;
-                }
-                drops[i]++;
-            }
-        }
-
-        setInterval(draw, 33);
-
-        window.addEventListener('resize', () => {
+        // Digital Rain Animation
+        function createDigitalRain() {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            const digitalRain = document.getElementById('digitalRain');
+            
+            digitalRain.appendChild(canvas);
+            
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
-        });
-
-        // Menu Toggle
-        const menuBtn = document.querySelector('.menu-btn');
-        const sidebar = document.querySelector('.sidebar');
-
-        menuBtn.addEventListener('click', () => {
-            sidebar.classList.toggle('active');
-        });
-
-        document.addEventListener('click', (e) => {
-            if (!sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
-                sidebar.classList.remove('active');
+            
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%^&*';
+            const fontSize = 16;
+            const columns = canvas.width / fontSize;
+            
+            const drops = [];
+            for (let i = 0; i < columns; i++) {
+                drops[i] = 1;
             }
+            
+            function draw() {
+                ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                
+                ctx.fillStyle = '#00FF00';
+                ctx.font = fontSize + 'px monospace';
+                
+                for (let i = 0; i < drops.length; i++) {
+                    const text = characters[Math.floor(Math.random() * characters.length)];
+                    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                    
+                    if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                        drops[i] = 0;
+                    }
+                    
+                    drops[i]++;
+                }
+            }
+            
+            setInterval(draw, 33);
+        }
+
+        // Initialize digital rain effect
+        createDigitalRain();
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            const digitalRain = document.getElementById('digitalRain');
+            digitalRain.innerHTML = '';
+            createDigitalRain();
+        });
+
+        // Form submission
+        document.querySelector('.contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Add form handling logic here
+            console.log('Form submitted');
         });
     </script>
-
 
 </body></html>
