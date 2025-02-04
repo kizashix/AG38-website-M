@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Share Tech Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/sharetechmono/v15/J7aHnp1uDWRBEqV98dVQztYldFcLowEF.woff2') format('woff2');
+}
+
+:root {
+  --primary: rgba(255, 255, 255, 0.9);
+  --accent-blue: rgba(0, 195, 255, 1);
+  --accent-purple: rgba(123, 97, 255, 1);
+  --accent-red: rgba(255, 71, 71, 1);
+  --dark-bg: #0a0a0f;
+  --panel-bg: rgba(20, 20, 28, 0.8);
+  --hologram-glow: 0 0 20px rgba(0, 195, 255, 0.4);
+}
+
+body {
+  background-color: var(--dark-bg);
+  color: var(--primary);
+  font-family: 'Share Tech Mono', monospace;
+}
+
+/* Terminal Scrollbar */
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: #003B00;
+  border-radius: 2px;
+}
+
+/* Matrix Rain Canvas */
+#matrix-rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.holographic-panel {
+  background: var(--panel-bg);
+  border: 1px solid rgba(0, 195, 255, 0.2);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  box-shadow: var(--hologram-glow);
+  transition: all 0.3s ease;
+}
+
+.holographic-panel:hover {
+  border-color: rgba(0, 195, 255, 0.4);
+  box-shadow: 0 0 30px rgba(0, 195, 255, 0.5);
+}
